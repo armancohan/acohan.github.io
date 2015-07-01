@@ -161,6 +161,11 @@ div.img {
     padding-right: 1rem;
 }
 
+div.hitcounter{
+  padding-left: 7rem;
+  float: right
+}
+
 div.rightcol {
       clear:right;
       float:right;
