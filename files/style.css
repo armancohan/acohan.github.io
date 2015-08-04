@@ -39,8 +39,8 @@ div.img {
     width: auto;
     height: auto;
     transform: scale(0.3, 0.3);
-    max-height: 250px;
-    max-width: 250px;
+    max-height: 100px;
+    max-width: 100px;
     padding-right: 1rem;
 }
 
