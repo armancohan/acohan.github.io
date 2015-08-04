@@ -34,6 +34,16 @@
 .padleft{padding-left:0;}
 .padright2{padding-right:0;}
 
+div.img {
+    margin: 5px;
+    width: auto;
+    height: auto;
+    transform: scale(0.3, 0.3);
+    max-height: 250px;
+    max-width: 250px;
+    padding-right: 1rem;
+}
+
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
@@ -84,6 +94,16 @@ hr {
 .social{margin-top:10.1rem;padding-left:0;}
 .linkedin{margin-left:0;}
 .twitter{margin-left:0;}
+
+div.img {
+    margin: 5px;
+    width: auto;
+    height: auto;
+    transform: scale(0.7, 0.7);
+    max-height: 250px;
+    max-width: 250px;
+    padding-right: 1rem;
+}
 
 hr {margin-left:7.5rem;}
 .padright{padding-right:1em;}
@@ -154,15 +174,7 @@ hr {margin-left:7.5rem;}
 
 }
 
-div.img {
-    margin: 5px;
-    width: auto;
-    height: auto;
-    transform: scale(0.7, 0.7);
-    max-height: 250px;
-    max-width: 250px;
-    padding-right: 1rem;
-}
+
 
 div.hitcounter{
   padding-left: 7rem;
