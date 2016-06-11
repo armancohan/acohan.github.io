@@ -4,7 +4,7 @@
 .toprow {margin:1.5rem 0 0 1.5rem;}
 .nav {font-size:1.6rem;padding-top:13px;font-family: 'EB Garamond', serif;text-transform:none;float:left;}
 .nav a{color:#666;margin:0 10px 0 10px;}
-.logo{float:left;width:240px;height:47px;background:url(images/logo.png) no-repeat;}	
+.logo{float:left;width:240px;height:47px;background:url(images/logo.png) no-repeat;}
 .headline {color:#bbb;font-size:2.4rem;line-height:30px;padding:12rem 1rem 4rem 1.5rem;}
 .news{padding-left:1.5rem;font-size:1.6rem}
 .about{padding-left:1.5rem;font-size:1.6rem}
@@ -240,7 +240,7 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #666666; text-decoration:none;}
+  color: #d9d9d9; text-decoration:none; }
 a:hover {
   color: #aaaaaa; transition:.7s;}
 
@@ -282,7 +282,7 @@ input[type="button"]:focus {
   color: #FFF;
   border-color: #222;
   background-color: #111;
-  outline: 0; 
+  outline: 0;
    transition:.7s;}
 .button.button-primary,
 button.button-primary,
