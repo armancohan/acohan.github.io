@@ -2,11 +2,12 @@
 
 .toprowcontainer{float:left;}
 .toprow {margin:1.5rem 0 0 1.5rem;}
-.nav {font-size:1.6rem;padding-top:13px;font-family: 'EB Garamond', serif;text-transform:none;float:left;}
-.nav a{color:#666;margin:0 10px 0 10px;}
+.nav {font-size:1rem;padding-top:13px;font-family: 'EB Garamond', serif;text-transform:none;float:left;}
+.nav a{color:#ece;margin:0 10px 0 10px;font-family: 'Open Sans', serif;}
 .logo{float:left;width:240px;height:47px;background:url(images/logo.png) no-repeat;}
-.headline {color:#bbb;font-size:2.4rem;line-height:30px;padding:12rem 1rem 4rem 1.5rem;}
+.headline {color:#bbb;font-size:1.4rem;line-height:120%;padding:2rem 1rem 2rem 1.5rem;}
 .news{padding-left:1.5rem;font-size:1.6rem}
+.below-title {padding-left:1.5rem;font-size:1.6rem}
 .about{padding-left:1.5rem;font-size:1.6rem}
 .work{padding-left:1.5rem;font-size:1.6rem}
 .workdetail{padding-left:1.5rem;text-align:center;}
@@ -31,17 +32,41 @@
 
 .button{margin-left:1.5rem;}
 .padright{padding-right:0;}
-.padleft{padding-left:0;}
+.padleft{padding-left:7rem;}
 .padright2{padding-right:0;}
 
-div.img {
-    margin: 5px;
+img {
+    /*margin: 10%;*/
     width: auto;
     height: auto;
-    transform: scale(0.3, 0.3);
-    max-height: 100px;
-    max-width: 100px;
-    padding-right: 1rem;
+    max-height: 85%;
+    max-width: 85%;
+    padding-right: 20%;
+    padding-left: 10%;
+    padding-top: 17%;
+}
+
+.icon {
+width:25px;
+height:25px;
+display:block;
+text-indent:-9999px;
+background-image:url(http://tridentdesign.com/wp-content/uploads/2012/12/gemicon.jpg);
+background-repeat:no-repeat;
+}
+
+.facebook {
+background-position:-140px -115px;
+}
+.twitter {
+background-position:-185px -115px;
+}
+.googleplus {
+background-position:-140px -265px;
+}
+
+li.li-news:not(:last-child) {
+    margin-bottom: 12px;
 }
 
 /* Misc
@@ -74,12 +99,13 @@ hr {
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
-.toprow {font-size:3rem; margin:3rem 0 0 7.5rem;}
-.nav {font-size:2.4rem;}
-.headline {font-size:2.1rem;line-height:44px;padding:5rem 0 1rem 7.5rem;}
+.toprow {font-size:2.5rem; margin:3rem 0 0 7.5rem;}
+.nav {font-size:3.4rem;}
+.headline {font-size:2.1rem;line-height:150%;padding:10% 0 1rem 7.5rem;}
 .about {font-size:1.8rem;line-height:32px;padding-left:7.5rem;}
-.news {font-size:1.8rem;line-height:32px;padding-left:7.5rem;}
-.work {font-size:1.8rem;line-height:32px;padding-left:7.5rem;}
+.news {font-size:1.8rem;line-height:100%;padding-left:7.5rem;}
+.below-title {width:80%, font-size:1.8rem;line-height:2.5rem;padding-left:7.5rem;padding-right:15%;}
+.work {font-size:1.6rem;line-height:32px;padding-left:7.5rem;}
 .rescont {font-size:1.8rem;line-height:32px;padding-left:7.5rem;}
 .workdetail {padding-left:7.5rem;padding-top:6rem;font-size:1.6rem;text-align:left;}
 .wdpadding{margin:0;}
@@ -95,19 +121,28 @@ hr {
 .linkedin{margin-left:0;}
 .twitter{margin-left:0;}
 
-div.img {
+/*div.img {
     margin: 5px;
     width: auto;
     height: auto;
-    transform: scale(0.7, 0.7);
-    max-height: 250px;
-    max-width: 250px;
+    max-height: 25%;
+    max-width: 25%;
+    padding-right: 1rem;
+}*/
+
+
+img {
+    margin: 5px;
+    width: auto;
+    height: auto;
+    max-height: 80%;
+    max-width: 80%;
     padding-right: 1rem;
 }
 
 hr {margin-left:7.5rem;}
 .padright{padding-right:1em;}
-.padleft{padding-left:1em;}
+.padleft{padding-left:5em;}
 .padright2{padding-right:2em;}
 
 
@@ -133,7 +168,7 @@ hr {margin-left:7.5rem;}
   .ten.columns                    { width: 82.6666666667%; }
   .eleven.columns                 { width: 91.3333333333%; }
   .twelve.columns                 { width: 100%; margin-left: 0; }
-  .twelvesmall.columns                 { width: 45%; margin-left: 0; }
+  .twelvesmall.columns                 { width: 100%; margin-left: 0; }
 
   .one-third.column               { width: 30.6666666667%; }
   .two-thirds.column              { width: 65.3333333333%; }
@@ -182,15 +217,15 @@ div.hitcounter{
 }
 
 div.rightcol {
-      clear:right;
+      /*clear:right;*/
       float:right;
-      width:50%;
-      padding-right: 3rem;
+      width:32%;
+      padding-right: 9%;
 }
 div.leftcol {
-    clear:left;
+    /*clear:left;*/
     float:left;
-    width:40%;
+    width:58%;
 }
 
 /* Base Styles
@@ -201,11 +236,11 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
-  font-weight: 400;
-  font-family: 'Helvetica', serif;
-  color: #929292;
+  font-size: 2em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.1;
+  font-weight: 100;
+  font-family: 'Lato', serif;
+  color: #c3c3c3;
   background-color:#181818; }
 
 
@@ -236,13 +271,16 @@ p {
   margin-top: 0;
   }
 
+span {
+  color:#e5ffdb;
+}
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #d9d9d9; text-decoration:none; }
+  color: #9abde3; text-decoration:none; }
 a:hover {
-  color: #aaaaaa; transition:.7s;}
+  color: #3ba157; transition:.7s;}
 
 
 /* Buttons
@@ -328,7 +366,10 @@ ol,
 form {
   margin-bottom: 2.5rem; }
 li:not(:last-child) {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+}
+li {
+  line-height: 2.4rem;
 }
 
 
@@ -345,9 +386,30 @@ li:not(:last-child) {
 .u-pull-left {
   float: left; }
 
+.label {
+      display: inline;
+      padding: .25em .6em;
+      font-size: 75%;
+      font-weight: 500;
+      line-height: 1;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      background-color: #999;
+      border-radius: .25em;
+      font-size: 60%;
+  }
 
-
-
+.label-pdf {
+  background-color: #bb4982;
+}
+.label-bib {
+  background-color: #415cc7;
+}
+.label-pos {
+  background-color: #b16f35;
+}
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
