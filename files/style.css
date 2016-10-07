@@ -397,7 +397,7 @@ li {
       white-space: nowrap;
       vertical-align: middle;
       background-color: #999;
-      border-radius: .25em;
+      border-radius: .55em;
       font-size: 60%;
   }
 
@@ -409,6 +409,9 @@ li {
 }
 .label-pos {
   background-color: #b16f35;
+}
+.label-vid {
+  background-color: #00916a;
 }
 
 /* Clearing
