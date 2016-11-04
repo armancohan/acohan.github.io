@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "N-gram-based Low-dimensional Representation for Document Classification"
+date:   2016-11-03 15:48:53 -0400
+categories: paper-notes
+---
+## [2014 - N-gram-based Low-dimensional Representation for Document Classification](http://arxiv.org/pdf/1412.6277.pdf)
+
+#### Remi Lebret, Ronan Collobert
+
+#### _Hypothesis / Main methods_
+
+- N-grams can be represented by averaging/summing their corresponding word vectors. Then a K-means clustering approach can cluster semantically similar concepts (n-grams). Essentially, each n-gram is assigned to one of the _K_ clusters and each document is represented by a feature vector of dimension _K_ where elements are count based features.
+
+#### _Results_
+
+- Achieve better results in comparison with LDA / LSA.
