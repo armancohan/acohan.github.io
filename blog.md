@@ -5,6 +5,8 @@
 layout: home
 ---
 
+<h2 class="page-heading">The following are short summaries of some of the papers that I've read.</h2>
+
 <!-- {% for post in site.posts  %}
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
