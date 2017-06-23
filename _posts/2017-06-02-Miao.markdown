@@ -18,8 +18,8 @@ categories: paper-notes
   - For autoencoding, rather than embedding inputs as points in a vector space, they describe them as explicit natural language sentences.
   - Discrete variational auto encoder is a natural fit for sentence compression.
   - Because it is discrete, they cannot use SGD. Instead, they use the REINFORCE algorithm to mitigate the problem of high variance during sampling-based variational inference.
-  - In early stages it is difficult to generate reasonable compression samples (hidden state has $|V|$ possible words to be sampled from)
-  - They use pointer networks to construct the variational distribution to combat this (which results in limiting the latent space to sequences appearing only in the source sentence -- the size of the softmax would be the words in the input sentence instead of $|V|$)
+  - In early stages it is difficult to generate reasonable compression samples (hidden state has $\vert V \vert$ possible words to be sampled from)
+  - They use pointer networks to construct the variational distribution to combat this (which results in limiting the latent space to sequences appearing only in the source sentence -- the size of the softmax would be the words in the input sentence instead of $\vert V \vert$)
 - Forced attention sentence compression (FSC)
   - FSC model shares the pointer network of the ASC model and combines a softmax output layer over the whole vocab. It can switch selecting sentences from the source or generating it from the background distribution.
 
@@ -27,8 +27,8 @@ categories: paper-notes
 
 - ASC
   - ASC consists of four recurrent networks: encoder, compressor, decoder, and language model
-  - *compression model*: inference network $q_\phi (c|s)$
-  - *reconstruction model*: is a generative network $p_\theta (s|c)$ that reconstructs the source sentences $s$ based on the latent compressions
+  - *compression model*: inference network $q_\phi (c \vert s)$
+  - *reconstruction model*: is a generative network $p_\theta (s \vert c)$ that reconstructs the source sentences $s$ based on the latent compressions
   - As the prior distribution a language model $p(c)$ is used to regularize the latent compressions
 
 
