@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "Language as a Latent Variable: Discrete Generative Models for Sentence Compression"
+date:   2017-06-03 11:29:34 -0500
+categories: paper-notes
+---
+### [Paper](http://aclweb.org/anthology/D/D16/D16-1031.pdf)
+
+#### Miao and Blunsom (Oxford and Deepmind)
+
+#### _Hypothesis_
+
+- A variational auto encoder can be used for inference of a generative model where the latent variable is a language itself.
+
+#### _Interesting methods_
+- Generative auto encoding sentence compression model (ASC)
+  - Other generative methods use continuous latent variables, this work uses discrete latent variables (words)
+  - For autoencoding, rather than embedding inputs as points in a vector space, they describe them as explicit natural language sentences.
+  - Discrete variational auto encoder is a natural fit for sentence compression.
+  - Because it is discrete, they cannot use SGD. Instead, they use the REINFORCE algorithm to mitigate the problem of high variance during sampling-based variational inference.
+  - In early stages it is difficult to generate reasonable compression samples (hidden state has $\vert V \vert$ possible words to be sampled from)
+  - They use pointer networks to construct the variational distribution to combat this (which results in limiting the latent space to sequences appearing only in the source sentence -- the size of the softmax would be the words in the input sentence instead of $\vert V \vert$)
+- Forced attention sentence compression (FSC)
+  - FSC model shares the pointer network of the ASC model and combines a softmax output layer over the whole vocab. It can switch selecting sentences from the source or generating it from the background distribution.
+
+#### Details
+
+- ASC
+  - ASC consists of four recurrent networks: encoder, compressor, decoder, and language model
+  - *compression model*: inference network $q_\phi (c \vert s)$
+  - *reconstruction model*: is a generative network $p_\theta (s \vert c)$ that reconstructs the source sentences $s$ based on the latent compressions
+  - As the prior distribution a language model $p(c)$ is used to regularize the latent compressions
+
+
+#### _Results_
+- Gigaword (sentence compression/summarization task)
+- Around 1 point imporvement of ROUGE-1 & ROUGE-L over Nallapati 2016 work. In ROUGE-2 they are comparable.
