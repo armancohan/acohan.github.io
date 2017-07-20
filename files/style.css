@@ -240,7 +240,7 @@ body {
   font-size: 2em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.1;
   font-weight: 100;
-  font-family: 'Lato', serif;
+  font-family: 'Open Sans', serif;
   color: #c3c3c3;
   background-color:#181818; }
 
