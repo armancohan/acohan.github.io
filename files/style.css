@@ -5,11 +5,11 @@
 .nav {font-size:1rem;padding-top:13px;font-family: 'EB Garamond', serif;text-transform:none;float:left;}
 .nav a{color:#ece;margin:0 10px 0 10px;font-family: 'Open Sans', serif;}
 .headline {color:#bbb;font-size:1.4rem;line-height:120%;padding:2rem 1rem 2rem 1.5rem;}
-.news{padding-left:1.5rem;font-size:60%}
+.news{padding-left:2.5em;font-size:60%;height:160px;width:80%;margin-bottom:6rem;overflow-y:auto;overflow-x:hidden}
 .below-title {padding-left:1.5rem;font-size:1.6rem}
 .about{padding-left:1.5rem;font-size:1.2rem}
-.work{padding-left:1.5rem;font-size:1.2rem}
-.workdetail{padding-left:1.5rem;text-align:center;}
+.work{padding-left:2.5em;font-size:1.2rem}
+.workdetail{padding-left:0.5rem;text-align:center;}
 .wdpadding{margin:3rem 0 0 0;}
 .sansserif{font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;color:#fff;font-size:11px;  font-weight: 400;
   letter-spacing: .1rem;}
@@ -102,7 +102,7 @@ hr {
 .nav {font-size:3.4rem;}
 .headline {font-size:2.1rem;line-height:150%;padding:10% 0 1rem 7.5rem;}
 .about {font-size:1.8rem;line-height:32px;padding-left:7.5rem;}
-.news {height:200px;overflow-y:auto;overflow-x:hidden;font-size:1.8rem;line-height:100%;padding-left:7.5rem;}
+.news {height:200px;width:60%;overflow-y:auto;overflow-x:hidden;font-size:1.8rem;line-height:100%;margin-bottom:6rem;padding-left:7.5rem;}
 .below-title {width:80%, font-size:200%;line-height:2.5rem;padding-left:7.5rem;padding-right:15%;}
 .work {font-size:1.6rem;line-height:32px;padding-left:7.5rem;}
 .rescont {font-size:1.8rem;line-height:32px;padding-left:7.5rem;}
@@ -157,6 +157,7 @@ hr {
 .scrollbar
 {
   height:200px;
+  width:600px;
   overflow-y:scroll;
   overflow-x:hidden;
   font-size:1.8rem;
@@ -423,6 +424,10 @@ li:not(:last-child) {
 }
 li {
   line-height: 2.4rem;
+}
+ul {
+     padding: 1em; /* Set the distance from the list edge to 1x the font size */
+     margin-bottom: 0.5rem;
 }
 
 
