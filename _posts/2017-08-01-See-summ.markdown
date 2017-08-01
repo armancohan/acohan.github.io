@@ -1,0 +1,85 @@
+---
+layout: post
+title:  "Get To The Point: Summarization with Pointer-Generator Networks"
+date:   2017-08-01 11:29:34 -0500
+categories: paper-notes
+---
+### [Paper-pdf](https://arxiv.org/pdf/1704.04368.pdf)
+Authors: Abigail See, Peter J. Liu, Chris Manning (Stanford)
+
+Published: April 25, 2017 (ACL)
+
+### _Summary_
+
+They extend the standard encoder-decoder architecture with a hybrid of pointer-generator network in their decoder. They also utilize a _coverage_ mechanism to keep track of what has been already summarized to discourage repetition. Their results show improvements over CNN/Daily Mail datasets.
+
+### _Interesting Methods_
+
+#### Pointer-generator
+They follow the Nallapati 2016 abstractive work as baseline which is an attentive sequence to sequence model and they extend it using a hybrid of pointer-generator network as well as a coverage mechanism.
+
+- $h^e_i$ encoder hidden state
+- $h^d_t$ decoder state at time $t$
+- $a^t$ attention distribution (Bahdanau attention):
+
+\begin{align}
+a^t=softmax\big(v^T \tanh([W_s h^d_t + W_h h^e_i + b_{attn})\big)
+\end{align}
+
+- $h_t^\*$ context vector, source representation.
+
+\begin{align}
+h_t^\* = \sum_i a_i^t h^e_i
+\end{align}
+
+- $P_{vocab}$ vocabulary distribution, the probability of generating words at time step $t$.
+
+\begin{align}
+P_{vocab} = softmax \big( V'(V[h^d_t, h_t^\*] + b) + b' \big)
+\end{align}
+
+- $P_{vocab}(w)$: probability of generating word $w$.
+
+- $P_{gen}$ probability of generating a word at time step $t$:
+
+\begin{align}
+p_{gen} = \sigma \big( \mathrm{linear}(h_t^\*, h^d_t, x_t) \big)
+\end{align}
+
+- Copying words from input is according to attention weights at that time step.
+- The final probability of generating a word $w$ at each time step is:
+
+\begin{align}
+P(w) = p_{gen} P_{vocab} (w) + (1-p_{gen})\sum_{i:w_i=w}a_i^t
+\end{align}
+
+- If $w$ is OOV, P_{vocab}(w)=0. Similarly, if $w$ is not in the source, $\sum_{i:w_i=w}a_i^t=0$.
+- Pointer-generator is able to produce OOV words
+
+#### Coverage
+
+- In order to limit the repetition problem, they maintain a coverage vector $c_t$ which is sum of attention distributions over all previous decoder timesteps:
+
+\begin{align}
+c^t = \sum_{t'=0}^{t-1} a^{t'}
+\end{align}
+
+- Use coverage as an extra input to the attention mechanism:
+
+\begin{align}
+e_t^i = v^T \tanh \big(\mathrm{linear}(h^e_i, h^d_t, c_i^t)\big)
+\end{align}
+
+- They find it necessary to add a coverage loss to penalize repeatedly attending to the same locations:
+
+\begin{align}
+\mathrm{covloss}_t = \sum_i \min (a_i^t , c_i^t)
+\end{align}
+
+- Final loss:
+
+\begin{align}
+\mathrm{loss} = -\log P(w^{\*}_t) + \gamma \sum_i \min (a_i^t , c_i^t)
+\end{align}
+
+- They first train the model without coverage until convergence and then add the coverage loss.
