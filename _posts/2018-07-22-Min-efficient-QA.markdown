@@ -29,6 +29,20 @@ $D_i^q = \sum(\alpha_{i,j}Q_j) $  # $D_i$ is the hidden state of the $i_{th}$ wo
 $\alpha_i = \mathrm{softmax}(D_iW_1Q) $
 
 $D^{enc} = RNN([D_i;D_i^q])$
+$Q^{enc} = RNN([Q_u])$
 
 _Decoder_:  
 Computes the score for the sentence by calculating bilinear similarities between sentence encodings and question encodings.
+
+To get a single hidden representation of the question they use a weighted sum according to the following:  
+
+$\beta = \mathrm{softmax}(w^T Q_{enc})$    &nbsp;&nbsp;&nbsp;&nbsp;                 # weights for each query word hidden state  
+$q^{enc} = \sum(\beta_j Q_j)$              &nbsp;&nbsp;&nbsp;&nbsp;                 # A hidden layer size vector representing the query  
+$h_i = D^{enc}_i W_2 q^{enc}$              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           # how similar each sentence is to the query  
+$\tilde{h} = \max{h_1, ..., h_L}$          &nbsp;&nbsp;&nbsp;&nbsp;                 # the most similar sentence  
+$\mathrm{score} = W_3^T h$ where $W_3 \in R^{h \times 2}$ &nbsp;&nbsp;&nbsp;&nbsp;  # each dimension in `score` means that the question is answerable or non-answerable given the sentence  
+
+#### _Weaknesses_
+
+- The modeling contribution does not seem to be strong enough for a full paper. Basically, the main contribution seems to be just adding a sentence selector module and using a previous q/a model.
+- A simple TF-IDF model works very close to the proposed sentence selection component. It is not clear why the speedups of TF-IDF sentence selection is very similar to the proposed sentence selector. TF-IDF is completely unsupervised and must be much faster than the proposed model.
