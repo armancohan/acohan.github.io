@@ -4,14 +4,15 @@ title:  "Mapping Text to Knowledge Graph Entities using Multi-Sense LSTMs"
 date:   2018-09-04 12:29:34 -0500
 categories: paper-notes
 ---
-### [Paper-pdf](https://arxiv.org/pdf/1708.00107.pdf)
-Authors: Dimitri Kartsaklis, Mohammad Taher Pilehvar, Nigel Collier (University of Cambridge)
+### [Paper-ArXiv](https://arxiv.org/pdf/1808.07724.pdf)
+Authors: Dimitri Kartsaklis, Mohammad Taher Pilehvar, Nigel Collier (University of Cambridge)  
+Venue: EMNLP 2018
 
 ### _Hypothesis_
 
-- KBs are sparse (lacking connections between many entities). Extending the KB using additional contexutal features can enrich them and connect the missing dots. 
-- This extended KB can be leveraged to create a synthetic corpus on which skipgram models can be trained to learn embeddings.
-- To map text to entities in this KB, we need to consider multiple senses associated with words in the text. To do this, we can use an LSTM whose input is the weighted averaged senses of words in the text (calculated by attention w.r.t context of the words).  
+- Many KBs are sparse (lacking connections between many entities). Extending a KB using additional contexutal features can enrich them and connect the missing dots. 
+- This extended KB can be leveraged to create a synthetic corpus on which skipgram models can be trained to learn entity embeddings.
+- To map text to entities in this KB, one needs to consider multiple senses associated with words in the text. To do this, one can use an LSTM whose input is the weighted averaged senses of words in the text (calculated by attention w.r.t context of the words).  
 
 ### _Task_
 
@@ -21,13 +22,13 @@ Mapping a textual description to KB entities (e.g., "can't sleep, too tired to t
 ### _Model_
 
 - How to embed entities?
-    - Use a set of reliable anchores or textual features that would link entities with textual descriptions. 
+    - Use a set of reliable anchors or textual features that would link entities with textual descriptions. 
         - The textual features are textual descriptions of the entity weighted by tf-idf values.
             - Tf-idf values are computed by considering word frequencies in a document composed of textual descriptions of an entity (tf) against all other documents (df).
 
         <figure>
             <img src="{{site.url}}/img/2018-09-05-2.png" alt="example"/>
-            <figcaption>The blue nodes show the KB (SNOMED) and relationships between concepts/entitites. The KB is further extended using words in textual descriptions corresponding to the blue entities. These are shown in red nodes. The edges are weighted according to the tf-idf values of the words in the textual descriptions of a given entity. This helps connecting entities that would not be otherwise connected. For example, here, *Alexia* and *Insomnia* both correspond to *inability* to something and therefore there could be some functional similarities between them.</figcaption>
+            <figcaption>The blue nodes show the KB (SNOMED) and relationships between concepts/entities. The KB is further extended using words in textual descriptions corresponding to the blue entities. These are shown in red nodes. The edges are weighted according to the tf-idf values of the words in the textual descriptions of a given entity. This helps connecting entities that would not be otherwise connected. For example, here, *Alexia* and *Insomnia* both correspond to *inability* to something and therefore there could be some functional similarities between them.</figcaption>
         </figure>
 
         - After extending the KB, the entities are embedded using skip-gram model trained on a synthetic corpus build by random work on this extended KB.
@@ -36,8 +37,8 @@ Mapping a textual description to KB entities (e.g., "can't sleep, too tired to t
 
 
 - Text-to-entity mapping: Transformation from a textual vector space to a KB vector space. 
-    - An LSTM encodes a sentence (description of the entity) into a point the entity space. 
-        - The authors raise the issue of polysemy (words with slightly different meanings) meanings. As an example, while the lemma for the word “fever” in a dictionary usually contains two or three definitions, the term occurs in many dozens of different forms and contexts in SNOMED.
+    - An LSTM encodes a sentence (description of the entity) into a point in the embedding space. 
+        - The authors raise the issue of polysemy (words with slightly different meanings). As an example, while the lemma for the word “fever” in a dictionary usually contains two or three definitions, the term occurs in many dozens of different forms and contexts in SNOMED.
         - They try to address this by extending a standard LSTM with a so called multi-sense LSTM that considers multiple sense-vectors given context in training.
             - Each word is associated with a single generic embedding and $k$ sense embeddings.
             - For each word $w_i$, a context vector $c_i$ is computed as the average of the generic vectors for all other words in the sentence.
@@ -50,7 +51,7 @@ Mapping a textual description to KB entities (e.g., "can't sleep, too tired to t
             <figure>
                 <img src="{{site.url}}/img/2018-09-05-3.png" alt="example"/>
                 <figcaption>
-                    Green vector (on right) is the target vector in the KB and red vectors (on top left) are vectors corresponding to senses. The objective is to minimize the loss between the predicted vectors and the target vectors prepared using skip-gram model. Intuitively, the multi-sense LSTM computes a weighted average of the senses that are computed according to the similarity of the given word sense w.r.t to the context (average of other words in the sentence). In other words, we see what sense of the word is more appropriate in this context and then use it to calculate the sense embeddings. The weighted average of sense embeddings is then fed to an LSTM an results in a vector that predicts the entity.
+                    Green vector (on right) is the target vector in the KB and red vectors (on top left) are vectors corresponding to senses. The objective is to minimize the loss between the predicted vectors and the target vectors prepared using skip-gram model. Intuitively, the multi-sense LSTM computes a weighted average of the senses that are computed according to the similarity of the given word sense w.r.t to the context (average of other words in the sentence). In other words, the authors see what sense of the word is more appropriate in this context and then use it to calculate the sense embeddings. The weighted average of sense embeddings is then fed to an LSTM an results in a vector that predicts the entity.
                 </figcaption>
             </figure>
             
