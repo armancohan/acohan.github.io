@@ -35,14 +35,15 @@
 .padright2{padding-right:0;}
 
 img {
-    /*margin: 10%;*/
+    margin: 40%;
     width: auto;
     height: auto;
     max-height: 85%;
     max-width: 85%;
-    padding-right: 20%;
+    /* padding-right: 20%;
     padding-left: 10%;
-    padding-top: 17%;
+    padding-top: 17%; */
+    /* border-radius: 50%; */
 }
 
 .icon {
@@ -272,9 +273,10 @@ div.hitcounter{
 
 div.rightcol {
       /*clear:right;*/
-      float:right;
-      width:32%;
-      padding-right: 9%;
+      float:left;
+      width:22%;
+      padding-top: 10%;
+      padding-left: 5%;
 }
 div.leftcol {
     /*clear:left;*/
