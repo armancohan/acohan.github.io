@@ -1,20 +1,49 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include header.html %}
+  {% include header.html %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
 
-    {% include footer.html %}
+  {% include footer.html %}
 
-  </body>
+</body>
 
 </html>
+
+<!-- JavaScript links placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+  (function () {
+    var collapseHooks = document.getElementsByClassName('collapseAfter');
+    for (var hook of collapseHooks) {
+
+      var
+        wrap = hook.parentNode,
+        a = wrap.parentNode.insertBefore(
+          document.createElement('a'),
+          wrap.nextSibling
+        );
+      a.addEventListener('click', toggleCollapse, false);
+      a.className = 'collapseAnchor';
+      a.href = "#"; /* without this it's not keyboard focusable */
+      wrap.classList.add('closed', 'collapseWrap');
+
+    } // for hook
+    function toggleCollapse(e) {
+      e.preventDefault();
+      e.currentTarget.previousElementSibling.classList.toggle('closed');
+    } // toggleCollapse
+  })();
+</script>
