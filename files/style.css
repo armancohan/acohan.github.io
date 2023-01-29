@@ -297,6 +297,12 @@ hr {
     padding-left: 7.5rem;
   }
 
+  .publications {
+    padding-left: 2.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .rescont {
     font-size: 1.8rem;
     line-height: 32px;
@@ -880,7 +886,9 @@ ul {
 }
 
 
-
+i.mediumFont {
+  font-size: 87%;
+}
 
 /* small font size */
 .smallFont li {
