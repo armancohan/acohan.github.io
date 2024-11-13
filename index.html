@@ -232,33 +232,6 @@
 								Scholar</a> page.</li>
 					</ul>
 					<!-- Publications Section -->
-					<!-- <div id="publications">
-						<div class="container">
-							<div class="row">
-								<div class="twelve columns">
-									<h3>Publications</h3>
-									<ul class="publication-list">
-										{% if items %}
-										{% assign sorted_items = items | sort: "property" %}
-										{% endif %}
-										{% assign pubs = site.data.publications | sort: "date" | reverse %}
-										{% for pub in pubs %}
-										<li class="publication-item">
-											<div class="publication-title">
-												<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>
-												<span
-													class="publication-type type-{{ pub.publication_type | downcase }}">{{
-													pub.publication_type }}</span>
-											</div>
-											<div class="publication-authors">{{ pub.authors | join: ", " }}</div>
-											<div class="publication-venue">{{ pub.venue }}</div>
-										</li>
-										{% endfor %}
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div> -->
 					<!-- <br /><i class="mediumFont">Selected recent papers:</i>
 						<div>
 							<ul class="smallFont">
