@@ -2,10 +2,10 @@
    One serif family (Newsreader), Yale Blue for links, a left margin column for section names. */
 
 :root {
-  --paper: #fdfdfc;
+  --paper: #f6f5f1;
   --ink: #1c1f24;
   --muted: #5e6673;
-  --rule: #e4e6ea;
+  --rule: #e2e0da;
   --link: #00356b;      /* Yale Blue */
   --link-hover: #286dc0; /* Yale secondary blue */
 
