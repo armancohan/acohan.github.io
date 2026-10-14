@@ -45,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap"
     rel="stylesheet">
-  <link href="./files/site.css" rel="stylesheet">
+  <link href="./files/site.css?v=4" rel="stylesheet">
 </head>
 
 <body>
@@ -92,68 +92,132 @@
       </div>
     </section>
 
-    <section class="row" id="papers" aria-labelledby="papers-title">
-      <h2 id="papers-title">Selected papers</h2>
+    <section class="row" id="research" aria-labelledby="research-title">
+      <h2 id="research-title">Research</h2>
       <div class="content">
         <p class="lede">
-          Papers from my group, by topic. The full list is on
+          Three questions organize my group's work. The full list of papers is on
           <a href="https://scholar.google.com/citations?user=baI7IY0AAAAJ&amp;hl=en">Google Scholar</a>.
         </p>
-        <section class="paper-group" aria-labelledby="t-science">
-          <h3 id="t-science">AI for Science</h3>
+        <figure class="figure">
+          <svg class="figure-art" viewBox="0 0 640 210" aria-hidden="true">
+            <!-- Panel 1: a language model as a stack of layers over input tokens -->
+            <g class="art">
+              <rect x="45" y="30" width="120" height="16" rx="3"/>
+              <rect x="45" y="56" width="120" height="16" rx="3"/>
+              <rect x="45" y="82" width="120" height="16" rx="3" class="accent-fill"/>
+              <rect x="45" y="108" width="120" height="16" rx="3"/>
+              <rect x="45" y="134" width="120" height="16" rx="3"/>
+              <path d="M58 175 V152 M80 175 V152 M102 175 V152 M124 175 V152 M146 175 V152" class="thin"/>
+              <rect x="52" y="175" width="12" height="12" rx="2"/>
+              <rect x="74" y="175" width="12" height="12" rx="2"/>
+              <rect x="96" y="175" width="12" height="12" rx="2"/>
+              <rect x="118" y="175" width="12" height="12" rx="2"/>
+              <rect x="140" y="175" width="12" height="12" rx="2"/>
+              <path d="M105 28 V12 M99 18 L105 12 L111 18" class="thin"/>
+            </g>
+            <!-- Arrow -->
+            <g class="art"><path d="M178 95 H210 M204 89 L210 95 L204 101" class="thin"/></g>
+            <!-- Panel 2: the same model under a lens, with a feature direction and a calibration plot -->
+            <g transform="translate(-31 0)">
+            <g class="art soft">
+              <rect x="252" y="40" width="100" height="14" rx="3"/>
+              <rect x="252" y="62" width="100" height="14" rx="3"/>
+              <rect x="252" y="84" width="100" height="14" rx="3"/>
+              <rect x="252" y="106" width="100" height="14" rx="3"/>
+              <rect x="252" y="128" width="100" height="14" rx="3"/>
+            </g>
+            <g class="art">
+              <circle cx="300" cy="91" r="40" class="lens"/>
+              <path d="M329 120 L356 147" class="handle"/>
+              <path d="M282 104 L316 78 M308 78 H316 V86" class="accent-line"/>
+              <rect x="380" y="62" width="70" height="70" rx="2" class="thin"/>
+              <path d="M380 132 L450 62" class="dash"/>
+              <circle cx="393" cy="121" r="3" class="accent-dot"/>
+              <circle cx="408" cy="108" r="3" class="accent-dot"/>
+              <circle cx="422" cy="90" r="3" class="accent-dot"/>
+              <circle cx="437" cy="80" r="3" class="accent-dot"/>
+            </g>
+            </g>
+            <!-- Arrow -->
+            <g class="art"><path d="M430 95 H462 M456 89 L462 95 L456 101" class="thin"/></g>
+            <!-- Panel 3: research papers with a highlighted claim, and ideas growing out of them -->
+            <g class="art" transform="translate(-40 0)">
+              <rect x="514" y="44" width="70" height="92" rx="2" class="page"/>
+              <rect x="530" y="34" width="70" height="92" rx="2" class="page"/>
+              <path d="M540 50 H588 M540 60 H582 M540 70 H590" class="thin"/>
+              <path d="M540 84 H586" class="accent-line"/>
+              <path d="M540 98 H574 M540 108 H584" class="thin"/>
+              <path d="M600 120 L612 150 M600 120 L582 160 M612 150 L582 160 M612 150 L626 172" class="thin"/>
+              <circle cx="600" cy="120" r="4" class="node"/>
+              <circle cx="612" cy="150" r="4" class="node"/>
+              <circle cx="582" cy="160" r="4" class="node"/>
+              <circle cx="626" cy="172" r="4.5" class="accent-node"/>
+            </g>
+          </svg>
+          <div class="figure-cols">
+            <div class="figure-col">
+              <p class="figure-q"><a href="#built">How should language models be built and trained?</a></p>
+              <ul class="figure-works"><li><a href="#p-longformer">Longformer</a></li><li><a href="#p-scibert">SciBERT</a></li><li><a href="#p-primera">PRIMERA</a></li><li><a href="#p-tess-2">TESS 2</a></li><li><a href="#p-rubric-self-distillation">Rubric self-distillation</a></li></ul>
+            </div>
+            <div class="figure-col">
+              <p class="figure-q"><a href="#know">How can we tell what they know?</a></p>
+              <ul class="figure-works"><li><a href="#p-benchmark-contamination">Benchmark contamination</a></li><li><a href="#p-llms-as-judges">LLMs as judges</a></li><li><a href="#p-steering-vectors">Steering vectors</a></li><li><a href="#p-metafaith">MetaFaith</a></li><li><a href="#p-rlmf">RLMF</a></li></ul>
+            </div>
+            <div class="figure-col">
+              <p class="figure-q"><a href="#science">How can they help scientists?</a></p>
+              <ul class="figure-works"><li><a href="#p-sciarena">SciArena</a></li><li><a href="#p-revere">REVERE</a></li><li><a href="#p-researchgym">ResearchGym</a></li><li><a href="#p-alpharesearch">AlphaResearch</a></li><li><a href="#p-probing-scientific-reasoning">Probing scientific reasoning</a></li></ul>
+            </div>
+          </div>
+        </figure>
+        <section class="lane" id="built" aria-labelledby="t-built">
+          <h3 id="t-built">How should language models be built and trained?</h3>
+          <p class="lane-desc">Architectures, pretraining objectives, retrieval, and post-training from references and rubrics.</p>
           <ol class="papers">
-            <li><a href="https://arxiv.org/abs/2508.19202">Demystifying Scientific Problem-Solving in LLMs by Probing Knowledge and Reasoning</a><span class="venue">ICML 2026</span></li>
-            <li><a href="https://arxiv.org/abs/2603.20667"><b>REVERE:</b> Reflective Evolving Research Engineer</a><span class="venue">COLM 2026</span></li>
-            <li><a href="https://arxiv.org/abs/2607.01233">Measuring the Gap Between Human and LLM Research Ideas</a><span class="venue">arXiv 2026</span></li>
-            <li><a href="https://arxiv.org/abs/2602.15112"><b>ResearchGym:</b> Evaluating Language Model Agents on Real-World AI Research</a><span class="venue">ICLR 2026 Workshop</span></li>
-            <li><a href="https://arxiv.org/abs/2511.08522"><b>AlphaResearch:</b> Accelerating New Algorithm Discovery with Language Models</a><span class="venue">arXiv 2025</span></li>
-            <li><a href="https://arxiv.org/abs/2507.01001"><b>SciArena:</b> An Open Evaluation Platform for Non-Verifiable Scientific Literature-Grounded Tasks</a><span class="venue">NeurIPS 2025</span></li>
-            <li><a href="https://aclanthology.org/2025.emnlp-main.310/"><b>SciRIFF:</b> A Resource to Enhance Language Model Instruction-Following over Scientific Literature</a><span class="venue">EMNLP 2025</span></li>
-            <li><a href="https://aclanthology.org/2025.acl-long.1009/">Can LLMs Identify Critical Limitations within Scientific Research? A Systematic Evaluation on AI Research Papers</a><span class="venue">ACL 2025</span></li>
-            <li><a href="https://aclanthology.org/2025.acl-long.1390/"><b>MIR:</b> Methodology Inspiration Retrieval for Scientific Research Problems</a><span class="venue">ACL 2025</span></li>
+            <li id="p-rubric-self-distillation" data-short="Rubric self-distillation" data-year="2026"><a href="https://openreview.net/forum?id=QIFuWgnn6m">Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation</a><span class="venue">COLM 2026</span></li>
+            <li id="p-references-improve-alignment" data-short="References improve alignment" data-year="2026"><a href="https://arxiv.org/abs/2602.16802">References Improve LLM Alignment in Non-Verifiable Domains</a><span class="venue">ICLR 2026</span></li>
+            <li id="p-reasoning-intensive-retrieval" data-short="Reasoning-intensive retrieval" data-year="2026"><a href="https://aclanthology.org/2026.acl-long.1705/">Rethinking Reasoning-Intensive Retrieval: Evaluating and Advancing Retrievers in Agentic Search Systems</a><span class="venue">ACL 2026</span></li>
+            <li id="p-limrank" data-short="LimRank" data-year="2025"><a href="https://aclanthology.org/2025.emnlp-main.1041/"><b>LimRank:</b> Less is More for Reasoning-Intensive Information Reranking</a><span class="venue">EMNLP 2025</span></li>
+            <li id="p-tess-2" data-short="TESS 2" data-year="2025"><a href="https://aclanthology.org/2025.acl-long.1029/"><b>TESS 2:</b> A Large-Scale Generalist Diffusion Language Model</a><span class="venue">ACL 2025</span></li>
+            <li id="p-llms-as-references" data-short="LLMs as references" data-year="2024"><a href="https://aclanthology.org/2024.naacl-long.478/">On Learning to Summarize with Large Language Models as References</a><span class="venue">NAACL 2024</span></li>
+            <li id="p-tess" data-short="TESS" data-year="2024"><a href="https://aclanthology.org/2024.eacl-long.144/"><b>TESS:</b> Text-to-Text Self-Conditioned Simplex Diffusion</a><span class="venue">EACL 2024</span></li>
+            <li id="p-primera" data-short="PRIMERA" data-year="2022"><a href="https://aclanthology.org/2022.acl-long.360/"><b>PRIMERA:</b> Pyramid-based Masked Sentence Pre-training for Multi-document Summarization</a><span class="venue">ACL 2022</span></li>
+            <li id="p-longformer" data-short="Longformer" data-year="2020"><a href="https://arxiv.org/abs/2004.05150"><b>Longformer:</b> The Long-Document Transformer</a><span class="venue">arXiv 2020</span></li>
+            <li id="p-scibert" data-short="SciBERT" data-year="2019"><a href="https://aclanthology.org/D19-1371/"><b>SciBERT:</b> A Pretrained Language Model for Scientific Text</a><span class="venue">EMNLP 2019</span></li>
           </ol>
         </section>
-        <section class="paper-group" aria-labelledby="t-reasoning">
-          <h3 id="t-reasoning">Reasoning &amp; Retrieval</h3>
+        <section class="lane" id="know" aria-labelledby="t-know">
+          <h3 id="t-know">How can we tell what they know?</h3>
+          <p class="lane-desc">Evaluations that hold up, a look at model internals, and models that report their own uncertainty faithfully.</p>
           <ol class="papers">
-            <li><a href="https://aclanthology.org/2026.acl-long.1705/">Rethinking Reasoning-Intensive Retrieval: Evaluating and Advancing Retrievers in Agentic Search Systems</a><span class="venue">ACL 2026</span></li>
-            <li><a href="https://aclanthology.org/2026.acl-long.2070/"><b>SciMDR:</b> Advancing Scientific Multimodal Document Reasoning</a><span class="venue">ACL 2026</span></li>
-            <li><a href="https://aclanthology.org/2025.emnlp-main.1041/"><b>LimRank:</b> Less is More for Reasoning-Intensive Information Reranking</a><span class="venue">EMNLP 2025</span></li>
-            <li><a href="https://arxiv.org/abs/2501.12380"><b>MMVU:</b> Measuring Expert-Level Multi-Discipline Video Understanding</a><span class="venue">CVPR 2025</span></li>
-            <li><a href="https://aclanthology.org/2024.acl-long.852/"><b>DocMath-Eval:</b> Evaluating Math Reasoning Capabilities of LLMs in Understanding Long and Specialized Documents</a><span class="venue">ACL 2024</span></li>
+            <li id="p-reflect" data-short="REFLECT" data-year="2026"><a href="https://arxiv.org/abs/2605.19196"><b>Time to REFLECT:</b> Can We Trust LLM Judges for Evidence-based Research Agents?</a><span class="venue">arXiv 2026</span></li>
+            <li id="p-rlmf" data-short="RLMF" data-year="2026"><a href="https://arxiv.org/abs/2606.32032"><b>RLMF:</b> Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs</a><span class="venue">COLM 2026</span></li>
+            <li id="p-llms-as-judges" data-short="LLMs as judges" data-year="2025"><a href="https://arxiv.org/abs/2511.20604">On Evaluating LLM Alignment by Evaluating LLMs as Judges</a><span class="venue">NeurIPS 2025</span></li>
+            <li id="p-reife" data-short="ReIFE" data-year="2025"><a href="https://aclanthology.org/2025.naacl-long.610/"><b>ReIFE:</b> Re-evaluating Instruction-Following Evaluation</a><span class="venue">NAACL 2025</span></li>
+            <li id="p-mmvu" data-short="MMVU" data-year="2025"><a href="https://arxiv.org/abs/2501.12380"><b>MMVU:</b> Measuring Expert-Level Multi-Discipline Video Understanding</a><span class="venue">CVPR 2025</span></li>
+            <li id="p-steering-vectors" data-short="Steering vectors" data-year="2025"><a href="https://arxiv.org/abs/2502.18862">One-shot Optimized Steering Vectors Mediate Safety-relevant Behaviors in LLMs</a><span class="venue">COLM 2025</span></li>
+            <li id="p-metafaith" data-short="MetaFaith" data-year="2025"><a href="https://aclanthology.org/2025.emnlp-main.1505/"><b>MetaFaith:</b> Faithful Natural Language Uncertainty Expression in LLMs</a><span class="venue">EMNLP 2025</span></li>
+            <li id="p-win-rate-calibration" data-short="Win-rate calibration" data-year="2024"><a href="https://aclanthology.org/2024.emnlp-main.273/">Bayesian Calibration of Win Rate Estimation with LLM Evaluators</a><span class="venue">EMNLP 2024</span></li>
+            <li id="p-benchmark-contamination" data-short="Benchmark contamination" data-year="2024"><a href="https://aclanthology.org/2024.naacl-long.482/">Investigating Data Contamination in Modern Benchmarks for Large Language Models</a><span class="venue">NAACL 2024</span></li>
+            <li id="p-code-contamination" data-short="Code contamination" data-year="2024"><a href="https://aclanthology.org/2024.acl-long.761/">Quantifying Contamination in Evaluating Code Generation Capabilities of Language Models</a><span class="venue">ACL 2024</span></li>
+            <li id="p-docmath-eval" data-short="DocMath-Eval" data-year="2024"><a href="https://aclanthology.org/2024.acl-long.852/"><b>DocMath-Eval:</b> Evaluating Math Reasoning Capabilities of LLMs in Understanding Long and Specialized Documents</a><span class="venue">ACL 2024</span></li>
+            <li id="p-observable-propagation" data-short="Observable propagation" data-year="2024"><a href="https://arxiv.org/abs/2312.16291"><b>Observable Propagation:</b> Uncovering Feature Vectors in Transformers</a><span class="venue">ICML 2024</span></li>
           </ol>
         </section>
-        <section class="paper-group" aria-labelledby="t-interp">
-          <h3 id="t-interp">Interpretability &amp; Reliability</h3>
+        <section class="lane" id="science" aria-labelledby="t-science">
+          <h3 id="t-science">How can they help scientists?</h3>
+          <p class="lane-desc">Models and agents that read, critique, and contribute to scientific research.</p>
           <ol class="papers">
-            <li><a href="https://arxiv.org/abs/2606.32032"><b>RLMF:</b> Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs</a><span class="venue">COLM 2026</span></li>
-            <li><a href="https://arxiv.org/abs/2502.18862">One-shot Optimized Steering Vectors Mediate Safety-relevant Behaviors in LLMs</a><span class="venue">COLM 2025</span></li>
-            <li><a href="https://aclanthology.org/2025.emnlp-main.1505/"><b>MetaFaith:</b> Faithful Natural Language Uncertainty Expression in LLMs</a><span class="venue">EMNLP 2025</span></li>
-            <li><a href="https://arxiv.org/abs/2312.16291"><b>Observable Propagation:</b> Uncovering Feature Vectors in Transformers</a><span class="venue">ICML 2024</span></li>
-          </ol>
-        </section>
-        <section class="paper-group" aria-labelledby="t-eval">
-          <h3 id="t-eval">Evaluation</h3>
-          <ol class="papers">
-            <li><a href="https://arxiv.org/abs/2605.19196"><b>Time to REFLECT:</b> Can We Trust LLM Judges for Evidence-based Research Agents?</a><span class="venue">arXiv 2026</span></li>
-            <li><a href="https://arxiv.org/abs/2511.20604">On Evaluating LLM Alignment by Evaluating LLMs as Judges</a><span class="venue">NeurIPS 2025</span></li>
-            <li><a href="https://aclanthology.org/2025.naacl-long.610/"><b>ReIFE:</b> Re-evaluating Instruction-Following Evaluation</a><span class="venue">NAACL 2025</span></li>
-            <li><a href="https://aclanthology.org/2024.emnlp-main.273/">Bayesian Calibration of Win Rate Estimation with LLM Evaluators</a><span class="venue">EMNLP 2024</span></li>
-            <li><a href="https://aclanthology.org/2024.naacl-long.482/">Investigating Data Contamination in Modern Benchmarks for Large Language Models</a><span class="venue">NAACL 2024</span></li>
-            <li><a href="https://aclanthology.org/2024.acl-long.761/">Quantifying Contamination in Evaluating Code Generation Capabilities of Language Models</a><span class="venue">ACL 2024</span></li>
-          </ol>
-        </section>
-        <section class="paper-group" aria-labelledby="t-lm">
-          <h3 id="t-lm">Language Models &amp; Alignment</h3>
-          <ol class="papers">
-            <li><a href="https://openreview.net/forum?id=QIFuWgnn6m">Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation</a><span class="venue">COLM 2026</span></li>
-            <li><a href="https://arxiv.org/abs/2602.16802">References Improve LLM Alignment in Non-Verifiable Domains</a><span class="venue">ICLR 2026</span></li>
-            <li><a href="https://aclanthology.org/2025.acl-long.1029/"><b>TESS 2:</b> A Large-Scale Generalist Diffusion Language Model</a><span class="venue">ACL 2025</span></li>
-            <li><a href="https://aclanthology.org/2024.naacl-long.478/">On Learning to Summarize with Large Language Models as References</a><span class="venue">NAACL 2024</span></li>
-            <li><a href="https://aclanthology.org/2024.eacl-long.144/"><b>TESS:</b> Text-to-Text Self-Conditioned Simplex Diffusion</a><span class="venue">EACL 2024</span></li>
-            <li><a href="https://aclanthology.org/2022.acl-long.360/"><b>PRIMERA:</b> Pyramid-based Masked Sentence Pre-training for Multi-document Summarization</a><span class="venue">ACL 2022</span></li>
-            <li><a href="https://arxiv.org/abs/2004.05150"><b>Longformer:</b> The Long-Document Transformer</a><span class="venue">arXiv 2020</span></li>
-            <li><a href="https://aclanthology.org/D19-1371/"><b>SciBERT:</b> A Pretrained Language Model for Scientific Text</a><span class="venue">EMNLP 2019</span></li>
+            <li id="p-probing-scientific-reasoning" data-short="Probing scientific reasoning" data-year="2026"><a href="https://arxiv.org/abs/2508.19202">Demystifying Scientific Problem-Solving in LLMs by Probing Knowledge and Reasoning</a><span class="venue">ICML 2026</span></li>
+            <li id="p-revere" data-short="REVERE" data-year="2026"><a href="https://arxiv.org/abs/2603.20667"><b>REVERE:</b> Reflective Evolving Research Engineer</a><span class="venue">COLM 2026</span></li>
+            <li id="p-scimdr" data-short="SciMDR" data-year="2026"><a href="https://aclanthology.org/2026.acl-long.2070/"><b>SciMDR:</b> Advancing Scientific Multimodal Document Reasoning</a><span class="venue">ACL 2026</span></li>
+            <li id="p-human-vs-llm-ideas" data-short="Human vs. LLM ideas" data-year="2026"><a href="https://arxiv.org/abs/2607.01233">Measuring the Gap Between Human and LLM Research Ideas</a><span class="venue">arXiv 2026</span></li>
+            <li id="p-researchgym" data-short="ResearchGym" data-year="2026"><a href="https://arxiv.org/abs/2602.15112"><b>ResearchGym:</b> Evaluating Language Model Agents on Real-World AI Research</a><span class="venue">ICLR 2026 Workshop</span></li>
+            <li id="p-alpharesearch" data-short="AlphaResearch" data-year="2025"><a href="https://arxiv.org/abs/2511.08522"><b>AlphaResearch:</b> Accelerating New Algorithm Discovery with Language Models</a><span class="venue">arXiv 2025</span></li>
+            <li id="p-sciarena" data-short="SciArena" data-year="2025"><a href="https://arxiv.org/abs/2507.01001"><b>SciArena:</b> An Open Evaluation Platform for Non-Verifiable Scientific Literature-Grounded Tasks</a><span class="venue">NeurIPS 2025</span></li>
+            <li id="p-sciriff" data-short="SciRIFF" data-year="2025"><a href="https://aclanthology.org/2025.emnlp-main.310/"><b>SciRIFF:</b> A Resource to Enhance Language Model Instruction-Following over Scientific Literature</a><span class="venue">EMNLP 2025</span></li>
+            <li id="p-critical-limitations" data-short="Critical limitations" data-year="2025"><a href="https://aclanthology.org/2025.acl-long.1009/">Can LLMs Identify Critical Limitations within Scientific Research? A Systematic Evaluation on AI Research Papers</a><span class="venue">ACL 2025</span></li>
+            <li id="p-mir" data-short="MIR" data-year="2025"><a href="https://aclanthology.org/2025.acl-long.1390/"><b>MIR:</b> Methodology Inspiration Retrieval for Scientific Research Problems</a><span class="venue">ACL 2025</span></li>
           </ol>
         </section>
       </div>
