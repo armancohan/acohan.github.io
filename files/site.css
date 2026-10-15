@@ -262,6 +262,43 @@ h1 {
   white-space: nowrap;
 }
 
+.term {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+.term small {
+  color: var(--accent-ink);
+  font-size: .75rem;
+  letter-spacing: .02em;
+}
+
+/* The course in session gets a short accent rule in the margin */
+.courses li.current {
+  position: relative;
+}
+
+.courses li.current::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 1rem;
+  width: 1.1rem;
+  height: 2px;
+  background: var(--accent);
+}
+
+.courses a {
+  color: var(--ink);
+  text-decoration-color: color-mix(in srgb, var(--ink) 25%, transparent);
+}
+
+.courses a:hover {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
 .course {
   max-width: 40rem;
 }
@@ -314,5 +351,14 @@ h1 {
   .courses li {
     grid-template-columns: minmax(0, 1fr);
     row-gap: .15rem;
+  }
+
+  .courses li.current::before {
+    display: none;
+  }
+
+  .term {
+    flex-direction: row;
+    gap: .8rem;
   }
 }
