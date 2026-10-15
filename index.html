@@ -43,33 +43,40 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap"
     rel="stylesheet">
-  <link href="./files/site.css?v=9" rel="stylesheet">
+  <link href="./files/site.css?v=10" rel="stylesheet">
 </head>
 
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="masthead">
-    <div class="masthead-text">
-      <h1>Arman Cohan</h1>
-      <p class="role">Assistant Professor of Computer Science<br><a href="https://www.yale.edu/">Yale University</a></p>
-      <ul class="links">
-        <li><a class="email-link" href="#contact">Email</a></li>
-        <li><a href="https://scholar.google.com/citations?user=baI7IY0AAAAJ&amp;hl=en">Google Scholar</a></li>
-        <li><a href="https://www.semanticscholar.org/author/Arman-Cohan/2527954">Semantic Scholar</a></li>
-        <li><a href="https://twitter.com/armancohan">Twitter</a></li>
-        <li><a href="https://yale-nlp.github.io">Yale NLP Lab</a></li>
-      </ul>
+    <div class="topline">
+      <span>armancohan.com</span>
+      <span>Yale University, New Haven</span>
     </div>
-    <img class="portrait" src="./files/pic.jpg" alt="Photo of Arman Cohan" width="473" height="476">
+    <div class="identity">
+      <div>
+        <h1>Arman<br>Cohan</h1>
+        <p class="role">Assistant Professor of Computer Science at
+          <a href="https://www.yale.edu/">Yale University</a>, leading the
+          <a href="https://yale-nlp.github.io">Yale NLP Lab</a>.</p>
+        <ul class="links">
+          <li><a class="email-link" href="#contact">Email</a></li>
+          <li><a href="https://scholar.google.com/citations?user=baI7IY0AAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://www.semanticscholar.org/author/Arman-Cohan/2527954">Semantic Scholar</a></li>
+          <li><a href="https://twitter.com/armancohan">Twitter</a></li>
+        </ul>
+      </div>
+      <img class="portrait" src="./files/pic.jpg" alt="Photo of Arman Cohan" width="473" height="476">
+    </div>
   </header>
 
   <main id="main">
-    <section class="row" id="about" aria-label="About">
-      <h2 class="visually-hidden">About</h2>
-      <div class="content prose">
+    <section class="block" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <div class="prose">
         <p>
           I am an Assistant Professor in the <a href="https://cpsc.yale.edu/">Department of Computer Science</a>
           at Yale University, where I lead the <a href="https://yale-nlp.github.io">Yale NLP Lab</a>.
@@ -92,127 +99,143 @@
       </div>
     </section>
 
-    <section class="row" id="research" aria-labelledby="research-title">
+    <section class="block" id="research" aria-labelledby="research-title">
       <h2 id="research-title">Research</h2>
-      <div class="content">
-        <p class="lede">
-          My group's work sits around three questions. Papers at a corner belong to one question; papers along a side
-          connect two. The full list is on
+      <div class="prose">
+        <p>
+          Three questions organize my group's work. In the map, each question is a sector, each ring is a year
+          (2019 at the center, 2026 at the edge), and each point is a selected paper. Work on a boundary connects
+          two questions. The full list is on
           <a href="https://scholar.google.com/citations?user=baI7IY0AAAAJ&amp;hl=en">Google Scholar</a>.
         </p>
       </div>
-        <figure class="tri">
-          <div class="tri-block tri-a tri-vertex">
-            <h3>What architectures and training signals make language models more capable?</h3>
-            <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://openreview.net/forum?id=QIFuWgnn6m" title="Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation">Rubric self-distillation</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2602.16802" title="References Improve LLM Alignment in Non-Verifiable Domains">References improve alignment</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.acl-long.1029/" title="TESS 2: A Large-Scale Generalist Diffusion Language Model">TESS 2</a></li><li><span class="fw-year">2024</span><a href="https://aclanthology.org/2024.eacl-long.144/" title="TESS: Text-to-Text Self-Conditioned Simplex Diffusion">TESS</a></li><li><span class="fw-year">2022</span><a href="https://aclanthology.org/2022.acl-long.360/" title="PRIMERA: Pyramid-based Masked Sentence Pre-training for Multi-document Summarization">PRIMERA</a></li><li><span class="fw-year">2020</span><a href="https://arxiv.org/abs/2004.05150" title="Longformer: The Long-Document Transformer">Longformer</a></li></ul>
-          </div>
-          <div class="tri-block tri-ab tri-edge">
-            <h4>Training for reliable behavior</h4>
-            <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2606.32032" title="RLMF: Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs">RLMF</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2502.18862" title="One-shot Optimized Steering Vectors Mediate Safety-relevant Behaviors in LLMs">Steering vectors</a></li></ul>
-          </div>
-          <div class="tri-center">
-          <svg class="tri-art" viewBox="-14 -6 388 330" aria-hidden="true">
-            <path class="tri-grid" d="M136.5 83.2 L223.5 83.2 M93.0 309.0 L49.5 233.8 M310.5 233.8 L267.0 309.0 M93.0 158.5 L267.0 158.5 M180.0 309.0 L93.0 158.5 M267.0 158.5 L180.0 309.0 M49.5 233.8 L310.5 233.8 M267.0 309.0 L136.5 83.2 M223.5 83.2 L93.0 309.0"/>
-            <path class="tri-edge" d="M180 8 L6 309 L354 309 Z"/>
-            <!-- Corner icons: a model's layers, a lens, a research paper -->
-            <g class="art" transform="translate(152 62) scale(.55)">
-              <rect x="0" y="0" width="100" height="13" rx="3"/>
-              <rect x="0" y="22" width="100" height="13" rx="3" class="accent-fill"/>
-              <rect x="0" y="44" width="100" height="13" rx="3"/>
-              <rect x="0" y="66" width="100" height="13" rx="3"/>
-            </g>
-            <g class="art" transform="translate(52 228) scale(.55)">
-              <circle cx="34" cy="34" r="32" class="lens"/>
-              <path d="M57 57 L80 80" class="handle"/>
-              <path d="M18 46 L46 22 M38 22 H46 V30" class="accent-line"/>
-            </g>
-            <g class="art" transform="translate(262 222) scale(.55)">
-              <rect x="0" y="10" width="60" height="78" rx="2" class="page"/>
-              <rect x="12" y="0" width="60" height="78" rx="2" class="page"/>
-              <path d="M22 16 H62 M22 26 H58 M22 46 H56" class="thin"/>
-              <path d="M22 36 H62" class="accent-line"/>
-            </g>
-            <!-- Corners and edge midpoints -->
-            <g class="tri-marks">
-              <circle cx="180" cy="8" r="4.5"/>
-              <circle cx="6" cy="309" r="4.5"/>
-              <circle cx="354" cy="309" r="4.5"/>
-            </g>
-            <g class="tri-ticks">
-              <circle cx="93.0" cy="158.5" r="3"/>
-              <circle cx="267.0" cy="158.5" r="3"/>
-              <circle cx="180.0" cy="309.0" r="3"/>
-            </g>
+      <figure class="display">
+        <div class="display-inner">
+          <svg class="map" viewBox="-424 -334 848 668" role="img" aria-label="Map of selected papers: three research questions as sectors, years as rings from 2019 to 2026.">
+            <circle cx="0" cy="0" r="48" class="ring"/>
+            <circle cx="0" cy="0" r="78" class="ring"/>
+            <circle cx="0" cy="0" r="108" class="ring"/>
+            <circle cx="0" cy="0" r="138" class="ring"/>
+            <circle cx="0" cy="0" r="168" class="ring"/>
+            <circle cx="0" cy="0" r="198" class="ring"/>
+            <circle cx="0" cy="0" r="228" class="ring"/>
+            <circle cx="0" cy="0" r="258" class="ring"/>
+            <line x1="-34.6" y1="-20.0" x2="-235.6" y2="-136.0" class="spoke"/>
+            <line x1="34.6" y1="-20.0" x2="235.6" y2="-136.0" class="spoke"/>
+            <line x1="0.0" y1="40.0" x2="0.0" y2="272.0" class="spoke"/>
+            <text x="-48.0" y="-4" class="year" text-anchor="middle">2019</text>
+            <text x="-78.0" y="-4" class="year" text-anchor="middle">2020</text>
+            <text x="-108.0" y="-4" class="year" text-anchor="middle">2021</text>
+            <text x="-138.0" y="-4" class="year" text-anchor="middle">2022</text>
+            <text x="-168.0" y="-4" class="year" text-anchor="middle">2023</text>
+            <text x="-198.0" y="-4" class="year" text-anchor="middle">2024</text>
+            <text x="-228.0" y="-4" class="year" text-anchor="middle">2025</text>
+            <text x="-258.0" y="-4" class="year" text-anchor="middle">2026</text>
+            <path d="M-52.2 -58.0 L-58.8 -124.9 L-28.9 -195.9 L33.3 -225.6 L109.9 -233.4 L172.6 -191.7" class="trace"/>
+            <path d="M223.0 -47.4 L248.0 71.1 L185.6 179.2 L79.7 245.4" class="trace"/>
+            <path d="M-61.2 188.3 L-122.5 192.3 L-166.7 155.5 L-200.4 108.8 L-221.2 55.2" class="trace"/>
+            <text x="0.0" y="-288.0" class="sector" text-anchor="middle">More capable models</text>
+            <text x="252.9" y="150.0" class="sector" text-anchor="start">Help for scientists</text>
+            <text x="-252.9" y="150.0" class="sector" text-anchor="end">Reliable models</text>
+            <text x="-252.9" y="-142.0" class="edge-title" text-anchor="end">Training for reliable behavior</text>
+            <text x="252.9" y="-142.0" class="edge-title" text-anchor="start">Models for scientific text</text>
+            <text x="0.0" y="310.0" class="edge-title" text-anchor="middle">Evaluating AI for science</text>
+            <a href="https://arxiv.org/abs/2607.01233" class="node"><title>Measuring the Gap Between Human and LLM Research Ideas (2026)</title><circle cx="-44.8" cy="254.1" r="4.2" class="pt edge"/><text x="-44.8" y="269.1" class="label" text-anchor="middle">Human vs. LLM ideas</text></a>
+            <a href="https://arxiv.org/abs/2508.19202" class="node"><title>Demystifying Scientific Problem-Solving in LLMs by Probing Knowledge and Reasoning (2026)</title><circle cx="44.8" cy="254.1" r="4.2" class="pt edge"/><text x="53.8" y="258.1" class="label" text-anchor="start">Demystifying</text></a>
+            <a href="https://arxiv.org/abs/2602.15112" class="node"><title>ResearchGym: Evaluating Language Model Agents on Real-World AI Research (2026)</title><circle cx="79.7" cy="245.4" r="4.2" class="pt"/><line x1="81.3" y1="250.1" x2="89.6" y2="275.8" class="leader"/><text x="98.6" y="279.8" class="label" text-anchor="start">ResearchGym</text></a>
+            <a href="https://arxiv.org/abs/2602.16802" class="node"><title>References Improve LLM Alignment in Non-Verifiable Domains (2026)</title><circle cx="109.9" cy="-233.4" r="4.2" class="pt"/><text x="118.9" y="-229.4" class="label" text-anchor="start">References improve alignment</text></a>
+            <a href="https://aclanthology.org/2025.acl-long.1029/" class="node"><title>TESS 2: A Large-Scale Generalist Diffusion Language Model (2025)</title><circle cx="33.3" cy="-225.6" r="4.2" class="pt"/><text x="33.3" y="-236.6" class="label" text-anchor="middle">TESS 2</text></a>
+            <a href="https://arxiv.org/abs/2605.19196" class="node"><title>Time to REFLECT: Can We Trust LLM Judges for Evidence-based Research Agents? (2026)</title><circle cx="-129.0" cy="223.4" r="4.2" class="pt edge"/><text x="-138.0" y="227.4" class="label" text-anchor="end">REFLECT</text></a>
+            <a href="https://arxiv.org/abs/2507.01001" class="node"><title>SciArena: An Open Evaluation Platform for Non-Verifiable Scientific Literature-Grounded Tasks (2025)</title><circle cx="114.0" cy="197.5" r="4.2" class="pt edge"/><text x="123.0" y="201.5" class="label" text-anchor="start">SciArena</text></a>
+            <a href="https://aclanthology.org/2024.eacl-long.144/" class="node"><title>TESS: Text-to-Text Self-Conditioned Simplex Diffusion (2024)</title><circle cx="-28.9" cy="-195.9" r="4.2" class="pt"/><text x="-28.9" y="-206.9" class="label" text-anchor="middle">TESS</text></a>
+            <a href="https://arxiv.org/abs/2511.20604" class="node"><title>On Evaluating LLM Alignment by Evaluating LLMs as Judges (2025)</title><circle cx="-122.5" cy="192.3" r="4.2" class="pt"/><text x="-131.5" y="196.3" class="label" text-anchor="end">LLMs as judges</text></a>
+            <a href="https://openreview.net/forum?id=QIFuWgnn6m" class="node"><title>Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation (2026)</title><circle cx="172.6" cy="-191.7" r="4.2" class="pt"/><text x="181.6" y="-187.7" class="label" text-anchor="start">Rubric self-distillation</text></a>
+            <a href="https://aclanthology.org/2024.naacl-long.482/" class="node"><title>Investigating Data Contamination in Modern Benchmarks for Large Language Models (2024)</title><circle cx="-61.2" cy="188.3" r="4.2" class="pt"/><text x="-52.2" y="192.3" class="label" text-anchor="start">Benchmark contamination</text></a>
+            <a href="https://arxiv.org/abs/2603.20667" class="node"><title>REVERE: Reflective Evolving Research Engineer (2026)</title><circle cx="185.6" cy="179.2" r="4.2" class="pt"/><text x="194.6" y="183.2" class="label" text-anchor="start">REVERE</text></a>
+            <a href="https://arxiv.org/abs/2606.32032" class="node"><title>RLMF: Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs (2026)</title><circle cx="-197.6" cy="-165.8" r="4.2" class="pt edge"/><text x="-206.6" y="-161.8" class="label" text-anchor="end">RLMF</text></a>
+            <a href="https://arxiv.org/abs/2501.12380" class="node"><title>MMVU: Measuring Expert-Level Multi-Discipline Video Understanding (2025)</title><circle cx="-166.7" cy="155.5" r="4.2" class="pt"/><text x="-175.7" y="159.5" class="label" text-anchor="end">MMVU</text></a>
+            <a href="https://aclanthology.org/2022.acl-long.360/" class="node"><title>PRIMERA: Pyramid-based Masked Sentence Pre-training for Multi-document Summarization (2022)</title><circle cx="-58.8" cy="-124.9" r="4.2" class="pt"/><text x="-67.8" y="-120.9" class="label" text-anchor="end">PRIMERA</text></a>
+            <a href="https://aclanthology.org/2025.emnlp-main.1505/" class="node"><title>MetaFaith: Faithful Natural Language Uncertainty Expression in LLMs (2025)</title><circle cx="-200.4" cy="108.8" r="4.2" class="pt"/><text x="-209.4" y="112.8" class="label" text-anchor="end">MetaFaith</text></a>
+            <a href="https://arxiv.org/abs/2502.18862" class="node"><title>One-shot Optimized Steering Vectors Mediate Safety-relevant Behaviors in LLMs (2025)</title><circle cx="-214.2" cy="-78.0" r="4.2" class="pt edge"/><text x="-223.2" y="-74.0" class="label" text-anchor="end">Steering vectors</text></a>
+            <a href="https://arxiv.org/abs/2610.08781" class="node"><title>IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas (2026)</title><circle cx="248.0" cy="71.1" r="4.2" class="pt"/><text x="257.0" y="75.1" class="label" text-anchor="start">IdeaAnchor</text></a>
+            <a href="https://aclanthology.org/2025.emnlp-main.310/" class="node"><title>SciRIFF: A Resource to Enhance Language Model Instruction-Following over Scientific Literature (2025)</title><circle cx="216.8" cy="-70.5" r="4.2" class="pt edge"/><text x="225.8" y="-66.5" class="label" text-anchor="start">SciRIFF</text></a>
+            <a href="https://arxiv.org/abs/2004.05150" class="node"><title>Longformer: The Long-Document Transformer (2020)</title><circle cx="-52.2" cy="-58.0" r="4.2" class="pt"/><text x="-61.2" y="-54.0" class="label" text-anchor="end">Longformer</text></a>
+            <a href="https://aclanthology.org/2025.naacl-long.610/" class="node"><title>ReIFE: Re-evaluating Instruction-Following Evaluation (2025)</title><circle cx="-221.2" cy="55.2" r="4.2" class="pt"/><text x="-230.2" y="59.2" class="label" text-anchor="end">ReIFE</text></a>
+            <a href="https://aclanthology.org/2025.acl-long.1390/" class="node"><title>MIR: Methodology Inspiration Retrieval for Scientific Research Problems (2025)</title><circle cx="223.0" cy="-47.4" r="4.2" class="pt"/><text x="232.0" y="-43.4" class="label" text-anchor="start">MIR</text></a>
+            <a href="https://aclanthology.org/2020.acl-main.207/" class="node"><title>SPECTER: Document-level Representation Learning using Citation-informed Transformers (2020)</title><circle cx="67.5" cy="-39.0" r="4.2" class="pt edge"/><text x="76.5" y="-35.0" class="label" text-anchor="start">SPECTER</text></a>
+            <a href="https://aclanthology.org/D19-1371/" class="node"><title>SciBERT: A Pretrained Language Model for Scientific Text (2019)</title><circle cx="35.7" cy="-32.1" r="4.2" class="pt edge"/><text x="26.7" y="-28.1" class="label" text-anchor="end">SciBERT</text></a>
           </svg>
-          </div>
-          <div class="tri-block tri-ac tri-edge">
-            <h4>Models for scientific text</h4>
-            <ul class="figure-works"><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.emnlp-main.310/" title="SciRIFF: A Resource to Enhance Language Model Instruction-Following over Scientific Literature">SciRIFF</a></li><li><span class="fw-year">2020</span><a href="https://aclanthology.org/2020.acl-main.207/" title="SPECTER: Document-level Representation Learning using Citation-informed Transformers">SPECTER</a></li><li><span class="fw-year">2019</span><a href="https://aclanthology.org/D19-1371/" title="SciBERT: A Pretrained Language Model for Scientific Text">SciBERT</a></li></ul>
-          </div>
-          <div class="tri-block tri-b tri-vertex">
-            <h3>How reliable are language models, and our measurements of them?</h3>
-            <ul class="figure-works"><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2511.20604" title="On Evaluating LLM Alignment by Evaluating LLMs as Judges">LLMs as judges</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.emnlp-main.1505/" title="MetaFaith: Faithful Natural Language Uncertainty Expression in LLMs">MetaFaith</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.naacl-long.610/" title="ReIFE: Re-evaluating Instruction-Following Evaluation">ReIFE</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2501.12380" title="MMVU: Measuring Expert-Level Multi-Discipline Video Understanding">MMVU</a></li><li><span class="fw-year">2024</span><a href="https://aclanthology.org/2024.naacl-long.482/" title="Investigating Data Contamination in Modern Benchmarks for Large Language Models">Benchmark contamination</a></li></ul>
-          </div>
-          <div class="tri-block tri-bc tri-edge">
-            <h4>Evaluating AI for science</h4>
-            <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2605.19196" title="Time to REFLECT: Can We Trust LLM Judges for Evidence-based Research Agents?">REFLECT</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2607.01233" title="Measuring the Gap Between Human and LLM Research Ideas">Human vs. LLM ideas</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2508.19202" title="Demystifying Scientific Problem-Solving in LLMs by Probing Knowledge and Reasoning">Demystifying scientific problem-solving</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2507.01001" title="SciArena: An Open Evaluation Platform for Non-Verifiable Scientific Literature-Grounded Tasks">SciArena</a></li></ul>
-          </div>
-          <div class="tri-block tri-c tri-vertex">
-            <h3>How can they help scientists?</h3>
-            <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2603.20667" title="REVERE: Reflective Evolving Research Engineer">REVERE</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2602.15112" title="ResearchGym: Evaluating Language Model Agents on Real-World AI Research">ResearchGym</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2610.08781" title="IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas">IdeaAnchor</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.acl-long.1390/" title="MIR: Methodology Inspiration Retrieval for Scientific Research Problems">MIR</a></li></ul>
-          </div>
-        </figure>
-    </section>
-
-    <section class="row" id="teaching" aria-labelledby="teaching-title">
-      <h2 id="teaching-title">Teaching</h2>
-      <div class="content">
-        <ol class="courses">
-          <li>
-            <span class="term">Fall 2026</span>
-            <div class="course">
-              <span class="code">CPSC 4880/5880</span> <a href="https://yale-nlp.github.io/cpsc4880/">Advances in Frontier AI Models</a>
-              <p>How frontier models are built and evaluated, across architectures, training and post-training, and agents. Students read and present recent papers and complete a team project.</p>
-            </div>
-          </li>
-          <li>
-            <span class="term">Spring 2026</span>
-            <div class="course">
-              <span class="code">CPSC 4770/5770</span> <a href="https://yale-nlp.github.io/cpsc4770/">Large Language Models: From Foundations to Modern Practice</a>
-              <p>The fundamentals of large language models from the ground up, through to building LLM-based systems for real-world problems.</p>
-            </div>
-          </li>
-          <li>
-            <span class="term">Spring 2025</span>
-            <div class="course">
-              <span class="code">CPSC 477/577</span> Natural Language Processing: Language Modeling
-            </div>
-          </li>
-          <li>
-            <span class="term">Spring 2024</span>
-            <div class="course">
-              <span class="code">CPSC 477/577</span> Natural Language Processing
-            </div>
-          </li>
-          <li>
-            <span class="term">Fall 2023</span>
-            <div class="course">
-              <span class="code">CPSC 488/588</span> <a href="https://yale-nlp.github.io/cpsc488/">AI Foundation Models</a>
-            </div>
-          </li>
-          <li>
-            <span class="term">Spring 2023</span>
-            <div class="course">
-              <span class="code">CPSC 670</span> <a href="https://yalenlp.github.io/cpsc670/">Topics in Natural Language Processing</a>
-            </div>
-          </li>
-        </ol>
+        </div>
+      </figure>
+      <div class="questions">
+        <div class="question">
+          <h3>What architectures and training signals make language models more capable?</h3>
+          <ul class="works"><li><span class="y">2026</span><a href="https://openreview.net/forum?id=QIFuWgnn6m" title="Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation">Rubric self-distillation</a></li><li><span class="y">2026</span><a href="https://arxiv.org/abs/2602.16802" title="References Improve LLM Alignment in Non-Verifiable Domains">References improve alignment</a></li><li><span class="y">2025</span><a href="https://aclanthology.org/2025.acl-long.1029/" title="TESS 2: A Large-Scale Generalist Diffusion Language Model">TESS 2</a></li><li><span class="y">2024</span><a href="https://aclanthology.org/2024.eacl-long.144/" title="TESS: Text-to-Text Self-Conditioned Simplex Diffusion">TESS</a></li><li><span class="y">2022</span><a href="https://aclanthology.org/2022.acl-long.360/" title="PRIMERA: Pyramid-based Masked Sentence Pre-training for Multi-document Summarization">PRIMERA</a></li><li><span class="y">2020</span><a href="https://arxiv.org/abs/2004.05150" title="Longformer: The Long-Document Transformer">Longformer</a></li></ul>
+          <h4>Training for reliable behavior</h4>
+          <ul class="works"><li><span class="y">2026</span><a href="https://arxiv.org/abs/2606.32032" title="RLMF: Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs">RLMF</a></li><li><span class="y">2025</span><a href="https://arxiv.org/abs/2502.18862" title="One-shot Optimized Steering Vectors Mediate Safety-relevant Behaviors in LLMs">Steering vectors</a></li></ul>
+        </div>
+        <div class="question">
+          <h3>How reliable are language models, and our measurements of them?</h3>
+          <ul class="works"><li><span class="y">2025</span><a href="https://arxiv.org/abs/2511.20604" title="On Evaluating LLM Alignment by Evaluating LLMs as Judges">LLMs as judges</a></li><li><span class="y">2025</span><a href="https://aclanthology.org/2025.emnlp-main.1505/" title="MetaFaith: Faithful Natural Language Uncertainty Expression in LLMs">MetaFaith</a></li><li><span class="y">2025</span><a href="https://aclanthology.org/2025.naacl-long.610/" title="ReIFE: Re-evaluating Instruction-Following Evaluation">ReIFE</a></li><li><span class="y">2025</span><a href="https://arxiv.org/abs/2501.12380" title="MMVU: Measuring Expert-Level Multi-Discipline Video Understanding">MMVU</a></li><li><span class="y">2024</span><a href="https://aclanthology.org/2024.naacl-long.482/" title="Investigating Data Contamination in Modern Benchmarks for Large Language Models">Benchmark contamination</a></li></ul>
+          <h4>Evaluating AI for science</h4>
+          <ul class="works"><li><span class="y">2026</span><a href="https://arxiv.org/abs/2605.19196" title="Time to REFLECT: Can We Trust LLM Judges for Evidence-based Research Agents?">REFLECT</a></li><li><span class="y">2026</span><a href="https://arxiv.org/abs/2607.01233" title="Measuring the Gap Between Human and LLM Research Ideas">Human vs. LLM ideas</a></li><li><span class="y">2026</span><a href="https://arxiv.org/abs/2508.19202" title="Demystifying Scientific Problem-Solving in LLMs by Probing Knowledge and Reasoning">Demystifying</a></li><li><span class="y">2025</span><a href="https://arxiv.org/abs/2507.01001" title="SciArena: An Open Evaluation Platform for Non-Verifiable Scientific Literature-Grounded Tasks">SciArena</a></li></ul>
+        </div>
+        <div class="question">
+          <h3>How can they help scientists?</h3>
+          <ul class="works"><li><span class="y">2026</span><a href="https://arxiv.org/abs/2603.20667" title="REVERE: Reflective Evolving Research Engineer">REVERE</a></li><li><span class="y">2026</span><a href="https://arxiv.org/abs/2602.15112" title="ResearchGym: Evaluating Language Model Agents on Real-World AI Research">ResearchGym</a></li><li><span class="y">2026</span><a href="https://arxiv.org/abs/2610.08781" title="IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas">IdeaAnchor</a></li><li><span class="y">2025</span><a href="https://aclanthology.org/2025.acl-long.1390/" title="MIR: Methodology Inspiration Retrieval for Scientific Research Problems">MIR</a></li></ul>
+          <h4>Models for scientific text</h4>
+          <ul class="works"><li><span class="y">2025</span><a href="https://aclanthology.org/2025.emnlp-main.310/" title="SciRIFF: A Resource to Enhance Language Model Instruction-Following over Scientific Literature">SciRIFF</a></li><li><span class="y">2020</span><a href="https://aclanthology.org/2020.acl-main.207/" title="SPECTER: Document-level Representation Learning using Citation-informed Transformers">SPECTER</a></li><li><span class="y">2019</span><a href="https://aclanthology.org/D19-1371/" title="SciBERT: A Pretrained Language Model for Scientific Text">SciBERT</a></li></ul>
+        </div>
       </div>
     </section>
 
-    <section class="row" id="contact" aria-labelledby="contact-title">
+    <section class="block" id="teaching" aria-labelledby="teaching-title">
+      <h2 id="teaching-title">Teaching</h2>
+      <ol class="courses">
+        <li>
+          <span class="term">Fall 2026</span>
+          <span class="code">CPSC 4880/5880</span>
+          <div class="course">
+            <a href="https://yale-nlp.github.io/cpsc4880/">Advances in Frontier AI Models</a>
+            <p>How frontier models are built and evaluated, across architectures, training and post-training, and
+              agents. Students read and present recent papers and complete a team project.</p>
+          </div>
+        </li>
+        <li>
+          <span class="term">Spring 2026</span>
+          <span class="code">CPSC 4770/5770</span>
+          <div class="course">
+            <a href="https://yale-nlp.github.io/cpsc4770/">Large Language Models: From Foundations to Modern Practice</a>
+            <p>The fundamentals of large language models from the ground up, through to building LLM-based systems
+              for real-world problems.</p>
+          </div>
+        </li>
+        <li>
+          <span class="term">Spring 2025</span>
+          <span class="code">CPSC 477/577</span>
+          <div class="course">Natural Language Processing: Language Modeling</div>
+        </li>
+        <li>
+          <span class="term">Spring 2024</span>
+          <span class="code">CPSC 477/577</span>
+          <div class="course">Natural Language Processing</div>
+        </li>
+        <li>
+          <span class="term">Fall 2023</span>
+          <span class="code">CPSC 488/588</span>
+          <div class="course"><a href="https://yale-nlp.github.io/cpsc488/">AI Foundation Models</a></div>
+        </li>
+        <li>
+          <span class="term">Spring 2023</span>
+          <span class="code">CPSC 670</span>
+          <div class="course"><a href="https://yalenlp.github.io/cpsc670/">Topics in Natural Language Processing</a></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="block" id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact</h2>
-      <div class="content prose">
+      <div class="prose">
         <p>
           <span id="email">arman.cohan [at] yale [dot] edu</span><br>
           Department of Computer Science, Yale University<br>
