@@ -164,6 +164,7 @@
       <h2 id="contact-title">Contact</h2>
       <div class="prose">
         <p>
+          <span id="email" class="rev">ude.elay@nahoc.namra</span><br>
           Department of Computer Science, Yale University<br>
           New Haven, Connecticut
         </p>
@@ -171,6 +172,18 @@
     </section>
   </main>
 
+  <script>
+    // The address is assembled here so it never appears in the page source as written.
+    (function () {
+      var u = ["arman", "cohan"].join(".");
+      var d = ["yale", "edu"].join(".");
+      var addr = u + "@" + d;
+      var a = document.createElement("a");
+      a.href = "mai" + "lto:" + addr;
+      a.textContent = addr;
+      document.getElementById("email").replaceWith(a);
+    })();
+  </script>
 </body>
 
 </html>

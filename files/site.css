@@ -319,6 +319,12 @@ h1 {
   line-height: 1.5;
 }
 
+/* Email fallback: stored reversed in the source, displayed the right way round */
+.rev {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
 /* Narrow screens */
 @media (max-width: 760px) {
   body {
