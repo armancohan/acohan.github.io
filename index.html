@@ -45,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap"
     rel="stylesheet">
-  <link href="./files/site.css?v=8" rel="stylesheet">
+  <link href="./files/site.css?v=9" rel="stylesheet">
 </head>
 
 <body>
@@ -96,81 +96,72 @@
       <h2 id="research-title">Research</h2>
       <div class="content">
         <p class="lede">
-          Three questions organize my group's work. The full list of papers is on
+          My group's work sits around three questions. Papers at a corner belong to one question; papers along a side
+          connect two. The full list is on
           <a href="https://scholar.google.com/citations?user=baI7IY0AAAAJ&amp;hl=en">Google Scholar</a>.
         </p>
-        <figure class="figure">
-          <svg class="figure-art" viewBox="0 0 640 210" aria-hidden="true">
-            <!-- Panel 1: a language model as a stack of layers over input tokens -->
-            <g class="art">
-              <rect x="45" y="30" width="120" height="16" rx="3"/>
-              <rect x="45" y="56" width="120" height="16" rx="3"/>
-              <rect x="45" y="82" width="120" height="16" rx="3" class="accent-fill"/>
-              <rect x="45" y="108" width="120" height="16" rx="3"/>
-              <rect x="45" y="134" width="120" height="16" rx="3"/>
-              <path d="M58 175 V152 M80 175 V152 M102 175 V152 M124 175 V152 M146 175 V152" class="thin"/>
-              <rect x="52" y="175" width="12" height="12" rx="2"/>
-              <rect x="74" y="175" width="12" height="12" rx="2"/>
-              <rect x="96" y="175" width="12" height="12" rx="2"/>
-              <rect x="118" y="175" width="12" height="12" rx="2"/>
-              <rect x="140" y="175" width="12" height="12" rx="2"/>
-              <path d="M105 28 V12 M99 18 L105 12 L111 18" class="thin"/>
+      </div>
+        <figure class="tri">
+          <div class="tri-block tri-a tri-vertex">
+            <h3>What architectures and training signals make language models more capable?</h3>
+            <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://openreview.net/forum?id=QIFuWgnn6m" title="Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation">Rubric self-distillation</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2602.16802" title="References Improve LLM Alignment in Non-Verifiable Domains">References improve alignment</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.acl-long.1029/" title="TESS 2: A Large-Scale Generalist Diffusion Language Model">TESS 2</a></li><li><span class="fw-year">2024</span><a href="https://aclanthology.org/2024.eacl-long.144/" title="TESS: Text-to-Text Self-Conditioned Simplex Diffusion">TESS</a></li><li><span class="fw-year">2022</span><a href="https://aclanthology.org/2022.acl-long.360/" title="PRIMERA: Pyramid-based Masked Sentence Pre-training for Multi-document Summarization">PRIMERA</a></li><li><span class="fw-year">2020</span><a href="https://arxiv.org/abs/2004.05150" title="Longformer: The Long-Document Transformer">Longformer</a></li></ul>
+          </div>
+          <div class="tri-block tri-ab tri-edge">
+            <h4>Training for reliable behavior</h4>
+            <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2606.32032" title="RLMF: Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs">RLMF</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2502.18862" title="One-shot Optimized Steering Vectors Mediate Safety-relevant Behaviors in LLMs">Steering vectors</a></li></ul>
+          </div>
+          <div class="tri-center">
+          <svg class="tri-art" viewBox="-14 -6 388 330" aria-hidden="true">
+            <path class="tri-grid" d="M136.5 83.2 L223.5 83.2 M93.0 309.0 L49.5 233.8 M310.5 233.8 L267.0 309.0 M93.0 158.5 L267.0 158.5 M180.0 309.0 L93.0 158.5 M267.0 158.5 L180.0 309.0 M49.5 233.8 L310.5 233.8 M267.0 309.0 L136.5 83.2 M223.5 83.2 L93.0 309.0"/>
+            <path class="tri-edge" d="M180 8 L6 309 L354 309 Z"/>
+            <!-- Corner icons: a model's layers, a lens, a research paper -->
+            <g class="art" transform="translate(152 62) scale(.55)">
+              <rect x="0" y="0" width="100" height="13" rx="3"/>
+              <rect x="0" y="22" width="100" height="13" rx="3" class="accent-fill"/>
+              <rect x="0" y="44" width="100" height="13" rx="3"/>
+              <rect x="0" y="66" width="100" height="13" rx="3"/>
             </g>
-            <!-- Arrow -->
-            <g class="art"><path d="M178 95 H210 M204 89 L210 95 L204 101" class="thin"/></g>
-            <!-- Panel 2: the same model under a lens, with a feature direction and a calibration plot -->
-            <g transform="translate(-31 0)">
-            <g class="art soft">
-              <rect x="252" y="40" width="100" height="14" rx="3"/>
-              <rect x="252" y="62" width="100" height="14" rx="3"/>
-              <rect x="252" y="84" width="100" height="14" rx="3"/>
-              <rect x="252" y="106" width="100" height="14" rx="3"/>
-              <rect x="252" y="128" width="100" height="14" rx="3"/>
+            <g class="art" transform="translate(52 228) scale(.55)">
+              <circle cx="34" cy="34" r="32" class="lens"/>
+              <path d="M57 57 L80 80" class="handle"/>
+              <path d="M18 46 L46 22 M38 22 H46 V30" class="accent-line"/>
             </g>
-            <g class="art">
-              <circle cx="300" cy="91" r="40" class="lens"/>
-              <path d="M329 120 L356 147" class="handle"/>
-              <path d="M282 104 L316 78 M308 78 H316 V86" class="accent-line"/>
-              <rect x="380" y="62" width="70" height="70" rx="2" class="thin"/>
-              <path d="M380 132 L450 62" class="dash"/>
-              <circle cx="393" cy="121" r="3" class="accent-dot"/>
-              <circle cx="408" cy="108" r="3" class="accent-dot"/>
-              <circle cx="422" cy="90" r="3" class="accent-dot"/>
-              <circle cx="437" cy="80" r="3" class="accent-dot"/>
+            <g class="art" transform="translate(262 222) scale(.55)">
+              <rect x="0" y="10" width="60" height="78" rx="2" class="page"/>
+              <rect x="12" y="0" width="60" height="78" rx="2" class="page"/>
+              <path d="M22 16 H62 M22 26 H58 M22 46 H56" class="thin"/>
+              <path d="M22 36 H62" class="accent-line"/>
             </g>
+            <!-- Corners and edge midpoints -->
+            <g class="tri-marks">
+              <circle cx="180" cy="8" r="4.5"/>
+              <circle cx="6" cy="309" r="4.5"/>
+              <circle cx="354" cy="309" r="4.5"/>
             </g>
-            <!-- Arrow -->
-            <g class="art"><path d="M430 95 H462 M456 89 L462 95 L456 101" class="thin"/></g>
-            <!-- Panel 3: research papers with a highlighted claim, and ideas growing out of them -->
-            <g class="art" transform="translate(-40 0)">
-              <rect x="514" y="44" width="70" height="92" rx="2" class="page"/>
-              <rect x="530" y="34" width="70" height="92" rx="2" class="page"/>
-              <path d="M540 50 H588 M540 60 H582 M540 70 H590" class="thin"/>
-              <path d="M540 84 H586" class="accent-line"/>
-              <path d="M540 98 H574 M540 108 H584" class="thin"/>
-              <path d="M600 120 L612 150 M600 120 L582 160 M612 150 L582 160 M612 150 L626 172" class="thin"/>
-              <circle cx="600" cy="120" r="4" class="node"/>
-              <circle cx="612" cy="150" r="4" class="node"/>
-              <circle cx="582" cy="160" r="4" class="node"/>
-              <circle cx="626" cy="172" r="4.5" class="accent-node"/>
+            <g class="tri-ticks">
+              <circle cx="93.0" cy="158.5" r="3"/>
+              <circle cx="267.0" cy="158.5" r="3"/>
+              <circle cx="180.0" cy="309.0" r="3"/>
             </g>
           </svg>
-          <div class="figure-cols">
-            <div class="figure-col">
-              <p class="figure-q">What architectures and training signals make language models more capable?</p>
-              <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://openreview.net/forum?id=QIFuWgnn6m" title="Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation">Rubric self-distillation</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2602.16802" title="References Improve LLM Alignment in Non-Verifiable Domains">References improve alignment</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.acl-long.1029/" title="TESS 2: A Large-Scale Generalist Diffusion Language Model">TESS 2</a></li><li><span class="fw-year">2024</span><a href="https://aclanthology.org/2024.eacl-long.144/" title="TESS: Text-to-Text Self-Conditioned Simplex Diffusion">TESS</a></li><li><span class="fw-year">2022</span><a href="https://aclanthology.org/2022.acl-long.360/" title="PRIMERA: Pyramid-based Masked Sentence Pre-training for Multi-document Summarization">PRIMERA</a></li><li><span class="fw-year">2020</span><a href="https://arxiv.org/abs/2004.05150" title="Longformer: The Long-Document Transformer">Longformer</a></li><li><span class="fw-year">2020</span><a href="https://aclanthology.org/2020.acl-main.207/" title="SPECTER: Document-level Representation Learning using Citation-informed Transformers">SPECTER</a></li><li><span class="fw-year">2019</span><a href="https://aclanthology.org/D19-1371/" title="SciBERT: A Pretrained Language Model for Scientific Text">SciBERT</a></li></ul>
-            </div>
-            <div class="figure-col">
-              <p class="figure-q">How reliable are language models, and our measurements of them?</p>
-              <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2606.32032" title="RLMF: Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs">RLMF</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2605.19196" title="Time to REFLECT: Can We Trust LLM Judges for Evidence-based Research Agents?">REFLECT</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2607.01233" title="Measuring the Gap Between Human and LLM Research Ideas">Human vs. LLM ideas</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2511.20604" title="On Evaluating LLM Alignment by Evaluating LLMs as Judges">LLMs as judges</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2502.18862" title="One-shot Optimized Steering Vectors Mediate Safety-relevant Behaviors in LLMs">Steering vectors</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.emnlp-main.1505/" title="MetaFaith: Faithful Natural Language Uncertainty Expression in LLMs">MetaFaith</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.naacl-long.610/" title="ReIFE: Re-evaluating Instruction-Following Evaluation">ReIFE</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2501.12380" title="MMVU: Measuring Expert-Level Multi-Discipline Video Understanding">MMVU</a></li><li><span class="fw-year">2024</span><a href="https://aclanthology.org/2024.naacl-long.482/" title="Investigating Data Contamination in Modern Benchmarks for Large Language Models">Benchmark contamination</a></li></ul>
-            </div>
-            <div class="figure-col">
-              <p class="figure-q">How can they help scientists?</p>
-              <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2603.20667" title="REVERE: Reflective Evolving Research Engineer">REVERE</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2508.19202" title="Demystifying Scientific Problem-Solving in LLMs by Probing Knowledge and Reasoning">Demystifying scientific problem-solving</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2602.15112" title="ResearchGym: Evaluating Language Model Agents on Real-World AI Research">ResearchGym</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2610.08781" title="IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas">IdeaAnchor</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2507.01001" title="SciArena: An Open Evaluation Platform for Non-Verifiable Scientific Literature-Grounded Tasks">SciArena</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.emnlp-main.310/" title="SciRIFF: A Resource to Enhance Language Model Instruction-Following over Scientific Literature">SciRIFF</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.acl-long.1390/" title="MIR: Methodology Inspiration Retrieval for Scientific Research Problems">MIR</a></li></ul>
-            </div>
+          </div>
+          <div class="tri-block tri-ac tri-edge">
+            <h4>Models for scientific text</h4>
+            <ul class="figure-works"><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.emnlp-main.310/" title="SciRIFF: A Resource to Enhance Language Model Instruction-Following over Scientific Literature">SciRIFF</a></li><li><span class="fw-year">2020</span><a href="https://aclanthology.org/2020.acl-main.207/" title="SPECTER: Document-level Representation Learning using Citation-informed Transformers">SPECTER</a></li><li><span class="fw-year">2019</span><a href="https://aclanthology.org/D19-1371/" title="SciBERT: A Pretrained Language Model for Scientific Text">SciBERT</a></li></ul>
+          </div>
+          <div class="tri-block tri-b tri-vertex">
+            <h3>How reliable are language models, and our measurements of them?</h3>
+            <ul class="figure-works"><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2511.20604" title="On Evaluating LLM Alignment by Evaluating LLMs as Judges">LLMs as judges</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.emnlp-main.1505/" title="MetaFaith: Faithful Natural Language Uncertainty Expression in LLMs">MetaFaith</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.naacl-long.610/" title="ReIFE: Re-evaluating Instruction-Following Evaluation">ReIFE</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2501.12380" title="MMVU: Measuring Expert-Level Multi-Discipline Video Understanding">MMVU</a></li><li><span class="fw-year">2024</span><a href="https://aclanthology.org/2024.naacl-long.482/" title="Investigating Data Contamination in Modern Benchmarks for Large Language Models">Benchmark contamination</a></li></ul>
+          </div>
+          <div class="tri-block tri-bc tri-edge">
+            <h4>Evaluating AI for science</h4>
+            <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2605.19196" title="Time to REFLECT: Can We Trust LLM Judges for Evidence-based Research Agents?">REFLECT</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2607.01233" title="Measuring the Gap Between Human and LLM Research Ideas">Human vs. LLM ideas</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2508.19202" title="Demystifying Scientific Problem-Solving in LLMs by Probing Knowledge and Reasoning">Demystifying scientific problem-solving</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2507.01001" title="SciArena: An Open Evaluation Platform for Non-Verifiable Scientific Literature-Grounded Tasks">SciArena</a></li></ul>
+          </div>
+          <div class="tri-block tri-c tri-vertex">
+            <h3>How can they help scientists?</h3>
+            <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2603.20667" title="REVERE: Reflective Evolving Research Engineer">REVERE</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2602.15112" title="ResearchGym: Evaluating Language Model Agents on Real-World AI Research">ResearchGym</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2610.08781" title="IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas">IdeaAnchor</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.acl-long.1390/" title="MIR: Methodology Inspiration Retrieval for Scientific Research Problems">MIR</a></li></ul>
           </div>
         </figure>
-      </div>
     </section>
 
     <section class="row" id="teaching" aria-labelledby="teaching-title">
