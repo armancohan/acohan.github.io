@@ -1,6 +1,6 @@
 /* armancohan.com
-   A precision-instrument look: cool off-white page on a faint engineering grid, one geometric
-   sans (Archivo, expanded for the name), electric blue as the only accent. */
+   A precision-instrument look: cool off-white page on a faint engineering grid, Roboto
+   throughout, electric blue as the only accent. */
 
 :root {
   --paper: #f3f5f9;
@@ -12,7 +12,7 @@
   --accent-ink: #1740c9;
 
 
-  --sans: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --wide: 12.5rem;
   --max: 70rem;
 }
@@ -111,10 +111,9 @@ p {
 h1 {
   margin: 0 0 1.1rem;
   font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 600;
-  font-stretch: 118%;
+  font-weight: 700;
   line-height: 1;
-  letter-spacing: -.02em;
+  letter-spacing: .02em;
   text-transform: uppercase;
 }
 
@@ -161,7 +160,6 @@ h1 {
   margin: .15rem 0 0;
   font-size: .9375rem;
   font-weight: 600;
-  font-stretch: 112%;
   letter-spacing: .06em;
   line-height: 1.3;
 }
