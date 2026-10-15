@@ -45,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap"
     rel="stylesheet">
-  <link href="./files/site.css?v=4" rel="stylesheet">
+  <link href="./files/site.css?v=6" rel="stylesheet">
 </head>
 
 <body>
@@ -157,22 +157,22 @@
           </svg>
           <div class="figure-cols">
             <div class="figure-col">
-              <p class="figure-q"><a href="#built">How should language models be built and trained?</a></p>
-              <ul class="figure-works"><li><a href="#p-longformer">Longformer</a></li><li><a href="#p-scibert">SciBERT</a></li><li><a href="#p-primera">PRIMERA</a></li><li><a href="#p-tess-2">TESS 2</a></li><li><a href="#p-rubric-self-distillation">Rubric self-distillation</a></li></ul>
+              <p class="figure-q"><a href="#built">What architectures and training signals make language models more capable?</a></p>
+              <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://openreview.net/forum?id=QIFuWgnn6m">Rubric self-distillation</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.acl-long.1029/">TESS 2</a></li><li><span class="fw-year">2024</span><a href="https://aclanthology.org/2024.eacl-long.144/">TESS</a></li><li><span class="fw-year">2022</span><a href="https://aclanthology.org/2022.acl-long.360/">PRIMERA</a></li><li><span class="fw-year">2020</span><a href="https://arxiv.org/abs/2004.05150">Longformer</a></li><li><span class="fw-year">2020</span><a href="https://aclanthology.org/2020.acl-main.207/">SPECTER</a></li><li><span class="fw-year">2019</span><a href="https://aclanthology.org/D19-1371/">SciBERT</a></li></ul>
             </div>
             <div class="figure-col">
-              <p class="figure-q"><a href="#know">How can we tell what they know?</a></p>
-              <ul class="figure-works"><li><a href="#p-benchmark-contamination">Benchmark contamination</a></li><li><a href="#p-llms-as-judges">LLMs as judges</a></li><li><a href="#p-steering-vectors">Steering vectors</a></li><li><a href="#p-metafaith">MetaFaith</a></li><li><a href="#p-rlmf">RLMF</a></li></ul>
+              <p class="figure-q"><a href="#reliability">How reliable are language models, and our measurements of them?</a></p>
+              <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2606.32032">RLMF</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2511.20604">LLMs as judges</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2502.18862">Steering vectors</a></li><li><span class="fw-year">2025</span><a href="https://aclanthology.org/2025.emnlp-main.1505/">MetaFaith</a></li><li><span class="fw-year">2024</span><a href="https://aclanthology.org/2024.naacl-long.482/">Benchmark contamination</a></li></ul>
             </div>
             <div class="figure-col">
               <p class="figure-q"><a href="#science">How can they help scientists?</a></p>
-              <ul class="figure-works"><li><a href="#p-sciarena">SciArena</a></li><li><a href="#p-revere">REVERE</a></li><li><a href="#p-researchgym">ResearchGym</a></li><li><a href="#p-alpharesearch">AlphaResearch</a></li><li><a href="#p-probing-scientific-reasoning">Probing scientific reasoning</a></li></ul>
+              <ul class="figure-works"><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2603.20667">REVERE</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2508.19202">Probing scientific reasoning</a></li><li><span class="fw-year">2026</span><a href="https://arxiv.org/abs/2602.15112">ResearchGym</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2507.01001">SciArena</a></li><li><span class="fw-year">2025</span><a href="https://arxiv.org/abs/2511.08522">AlphaResearch</a></li></ul>
             </div>
           </div>
         </figure>
         <section class="lane" id="built" aria-labelledby="t-built">
-          <h3 id="t-built">How should language models be built and trained?</h3>
-          <p class="lane-desc">Architectures, pretraining objectives, retrieval, and post-training from references and rubrics.</p>
+          <h3 id="t-built">What architectures and training signals make language models more capable?</h3>
+          <p class="lane-desc">Long-context and diffusion architectures, pretraining for scientific text, document representations, retrieval, and post-training from references and rubrics.</p>
           <ol class="papers">
             <li id="p-rubric-self-distillation" data-short="Rubric self-distillation" data-year="2026"><a href="https://openreview.net/forum?id=QIFuWgnn6m">Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation</a><span class="venue">COLM 2026</span></li>
             <li id="p-references-improve-alignment" data-short="References improve alignment" data-year="2026"><a href="https://arxiv.org/abs/2602.16802">References Improve LLM Alignment in Non-Verifiable Domains</a><span class="venue">ICLR 2026</span></li>
@@ -183,11 +183,12 @@
             <li id="p-tess" data-short="TESS" data-year="2024"><a href="https://aclanthology.org/2024.eacl-long.144/"><b>TESS:</b> Text-to-Text Self-Conditioned Simplex Diffusion</a><span class="venue">EACL 2024</span></li>
             <li id="p-primera" data-short="PRIMERA" data-year="2022"><a href="https://aclanthology.org/2022.acl-long.360/"><b>PRIMERA:</b> Pyramid-based Masked Sentence Pre-training for Multi-document Summarization</a><span class="venue">ACL 2022</span></li>
             <li id="p-longformer" data-short="Longformer" data-year="2020"><a href="https://arxiv.org/abs/2004.05150"><b>Longformer:</b> The Long-Document Transformer</a><span class="venue">arXiv 2020</span></li>
+            <li id="p-specter" data-short="SPECTER" data-year="2020"><a href="https://aclanthology.org/2020.acl-main.207/"><b>SPECTER:</b> Document-level Representation Learning using Citation-informed Transformers</a><span class="venue">ACL 2020</span></li>
             <li id="p-scibert" data-short="SciBERT" data-year="2019"><a href="https://aclanthology.org/D19-1371/"><b>SciBERT:</b> A Pretrained Language Model for Scientific Text</a><span class="venue">EMNLP 2019</span></li>
           </ol>
         </section>
-        <section class="lane" id="know" aria-labelledby="t-know">
-          <h3 id="t-know">How can we tell what they know?</h3>
+        <section class="lane" id="reliability" aria-labelledby="t-reliability">
+          <h3 id="t-reliability">How reliable are language models, and our measurements of them?</h3>
           <p class="lane-desc">Evaluations that hold up, a look at model internals, and models that report their own uncertainty faithfully.</p>
           <ol class="papers">
             <li id="p-reflect" data-short="REFLECT" data-year="2026"><a href="https://arxiv.org/abs/2605.19196"><b>Time to REFLECT:</b> Can We Trust LLM Judges for Evidence-based Research Agents?</a><span class="venue">arXiv 2026</span></li>

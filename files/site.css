@@ -247,10 +247,18 @@ h1 {
 .figure-cols {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: auto auto;
   column-gap: 1.75rem;
   margin-top: 1.4rem;
   padding-top: 1.1rem;
   border-top: 1px solid var(--rule);
+}
+
+/* Questions share one row, so the three lists start on the same line */
+.figure-col {
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
 }
 
 .figure-q {
@@ -278,9 +286,20 @@ h1 {
   line-height: 1.55;
 }
 
-.figure-works a {
+.figure-works li {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr);
+}
+
+.fw-year {
   color: var(--muted);
-  text-decoration-color: transparent;
+  font-size: .875rem;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.figure-works a {
+  color: var(--ink);
+  text-decoration-color: color-mix(in srgb, var(--ink) 25%, transparent);
 }
 
 .figure-works a:hover {
@@ -446,7 +465,12 @@ h1 {
 
   .figure-cols {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
     row-gap: 1.25rem;
+  }
+
+  .figure-col {
+    display: block;
   }
 }
 
