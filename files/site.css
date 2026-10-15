@@ -89,12 +89,34 @@ p {
   margin: 0 auto;
 }
 
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .4rem 1.8rem;
+  padding: 1.25rem 0 0;
+  font-size: .9375rem;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+.block {
+  scroll-margin-top: 1.5rem;
+}
+
 .identity {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;
   column-gap: 3rem;
-  padding: 4rem 0 3rem;
+  padding: 2.75rem 0 3rem;
 }
 
 h1 {
@@ -326,9 +348,14 @@ h1 .cap {
   }
 
 
+  .nav {
+    justify-content: flex-start;
+    gap: .4rem 1.3rem;
+  }
+
   .identity {
     grid-template-columns: minmax(0, 1fr);
-    padding: 2.25rem 0 2rem;
+    padding: 2rem 0 2rem;
   }
 
   .portrait {
