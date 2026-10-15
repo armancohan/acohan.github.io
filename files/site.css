@@ -89,32 +89,25 @@ p {
   margin: 0 auto;
 }
 
-.topline {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid var(--ink);
-  font-size: .8125rem;
-  letter-spacing: .02em;
-  color: var(--muted);
-}
-
 .identity {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;
   column-gap: 3rem;
-  padding: 3.5rem 0 3rem;
+  padding: 4rem 0 3rem;
 }
 
 h1 {
   margin: 0 0 1.1rem;
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
   font-weight: 600;
   line-height: 1;
   letter-spacing: .06em;
   text-transform: uppercase;
+}
+
+h1 .cap {
+  font-size: 1.22em;
 }
 
 .role {
@@ -332,9 +325,6 @@ h1 {
     font-size: 1rem;
   }
 
-  .topline {
-    font-size: .75rem;
-  }
 
   .identity {
     grid-template-columns: minmax(0, 1fr);
