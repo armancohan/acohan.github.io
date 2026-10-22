@@ -195,58 +195,92 @@ h1 .cap {
   color: var(--muted);
 }
 
-/* The three questions, each with its papers */
-.questions {
+/* Research agenda: a thesis, then three argued themes with featured projects */
+.agenda {
+  max-width: 44rem;
+}
+
+.thesis {
+  margin-bottom: 2.25rem;
+}
+
+.theme {
+  padding-top: 1.5rem;
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+.theme h3 {
+  margin: 0 0 .6rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.theme > p {
+  margin-bottom: 1rem;
+}
+
+.projects-label {
+  margin: 1.4rem 0 .7rem;
+  color: var(--muted);
+  font-size: .9375rem;
+  font-style: italic;
+}
+
+.projects {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: 2rem;
-  margin-top: 1.75rem;
-}
-
-.question h3 {
-  margin: 0 0 .7rem;
-  padding-top: .7rem;
-  border-top: 1px solid var(--rule);
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-.question h4 {
-  margin: 1.1rem 0 .4rem;
-  color: var(--muted);
-  font-size: .8125rem;
-  font-weight: 500;
-  letter-spacing: .03em;
-}
-
-.works {
+  gap: 1.25rem;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.projects a {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.projects img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+
+.projects span {
+  display: block;
+  margin-top: .5rem;
+  font-size: .9375rem;
+  line-height: 1.4;
+}
+
+.projects a:hover img {
+  border-color: var(--accent);
+}
+
+.projects a:hover span {
+  color: var(--accent);
+}
+
+.more {
+  margin: 1.25rem 0 0;
+  color: var(--muted);
   font-size: .9375rem;
   line-height: 1.5;
 }
 
-.works li {
-  display: grid;
-  grid-template-columns: 2.7rem minmax(0, 1fr);
-}
-
-.works .y {
+.more a {
   color: var(--muted);
-  font-size: .8125rem;
-  padding-top: .1em;
 }
 
-.works a {
-  color: var(--ink);
-  text-decoration-color: color-mix(in srgb, var(--ink) 25%, transparent);
-}
-
-.works a:hover {
+.more a:hover {
   color: var(--accent);
-  text-decoration-color: currentColor;
 }
 
 /* Teaching: a vertical timeline, one dot per term */
@@ -375,9 +409,8 @@ h1 .cap {
     grid-column: 1;
   }
 
-  .questions {
-    grid-template-columns: minmax(0, 1fr);
-    row-gap: 1.25rem;
+  .projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .courses {
