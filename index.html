@@ -113,15 +113,12 @@
         </p>
         <section class="theme">
           <h3>Training and evaluating language models in hard-to-verify domains</h3>
-          <p>Reinforcement learning works well when a verifier can check the answer, as in math or code.
-            Most expert work is not like that. A literature review, a clinical note, or a research proposal has no
-            single correct output to check against, so the usual recipe of training against a verifiable reward
-            does not apply. My group studies how to train, adapt, and evaluate models in these hard-to-verify
-            domains. We have shown that reference answers can anchor alignment where no verifier exists, that
-            rubrics can take the place of a learned reward model so a model can improve from its own
-            rubric-guided outputs, and that alignment can be measured by how well a model judges, since judging
-            is itself a hard-to-verify task. This work builds on our earlier models: long-context attention
-            (Longformer), pretraining for scientific text (SciBERT, SPECTER), multi-document pretraining
+          <p>Reinforcement learning has proven highly effective in domains where outputs can be automatically verified,
+            as in mathematics and code. Many expert tasks, however, fall outside this paradigm. We focus on the
+            challenge of how to train, adapt, and evaluate models in hard-to-verify domains. We a series of work on
+            alignment evaluation and post-training methods to improve models in hard-to-verify tasks.
+            This work builds on our earlier research on foundational models for expert tasks, including long-context
+            attention (Longformer), pretraining for scientific text (SciBERT, SPECTER), multi-document pretraining
             (PRIMERA), and diffusion language models (TESS, TESS 2).</p>
           <p class="projects-label">Recent projects</p>
           <ul class="projects">
@@ -129,24 +126,27 @@
               <a href="https://openreview.net/forum?id=QIFuWgnn6m"
                 title="Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation">
                 <img src="./img/research/rubric.jpg" alt="" width="720" height="480" loading="lazy">
-                <span>Rubric-conditioned self-distillation: rubrics as the reward</span>
+                <span>Rubric-conditioned self-distillation</span>
               </a>
             </li>
             <li>
-              <a href="https://arxiv.org/abs/2511.20604" title="On Evaluating LLM Alignment by Evaluating LLMs as Judges">
+              <a href="https://arxiv.org/abs/2511.20604"
+                title="On Evaluating LLM Alignment by Evaluating LLMs as Judges">
                 <img src="./img/research/judges.jpg" alt="" width="720" height="480" loading="lazy">
-                <span>Alignment evaluation: measuring alignment through judging</span>
+                <span>Alignment evaluation</span>
               </a>
             </li>
             <li>
               <a href="https://arxiv.org/abs/2602.16802"
                 title="References Improve LLM Alignment in Non-Verifiable Domains">
                 <img src="./img/research/references.jpg" alt="" width="720" height="480" loading="lazy">
-                <span>References as supervision for alignment</span>
+                <span>References as privileged supervision for alignment</span>
               </a>
             </li>
           </ul>
-          <p class="more">Also: <a href="https://aclanthology.org/2025.acl-long.1029/" title="TESS 2: A Large-Scale Generalist Diffusion Language Model">TESS 2</a> (2025), <a href="https://aclanthology.org/2026.acl-long.1705/"
+          <p class="more">Also: <a href="https://aclanthology.org/2025.acl-long.1029/"
+              title="TESS 2: A Large-Scale Generalist Diffusion Language Model">TESS 2</a> (2025), <a
+              href="https://aclanthology.org/2026.acl-long.1705/"
               title="Rethinking Reasoning-Intensive Retrieval: Evaluating and Advancing Retrievers in Agentic Search Systems">Reasoning-intensive
               retrieval</a> (2026), <a href="https://aclanthology.org/2024.eacl-long.144/"
               title="TESS: Text-to-Text Self-Conditioned Simplex Diffusion">TESS</a> (2024), <a
@@ -160,13 +160,14 @@
               title="SciBERT: A Pretrained Language Model for Scientific Text">SciBERT</a> (2019).</p>
         </section>
         <section class="theme">
-          <h3>A model is only useful if we can tell when to trust it</h3>
-          <p>Benchmarks, LLM judges, and a model's own confidence are all measurements, and each can be wrong in
-            ways that are hard to see. We study how these measurements fail, from contamination in benchmarks to the
-            gap between what a judge rewards and what people want. We also build models that report their uncertainty
-            faithfully: MetaFaith and RLMF train a model to say it is unsure exactly when it is. On the
-            interpretability side, we trace reliability to mechanisms inside the model, such as shared circuits for
-            uncertainty (SCIURus) and one-shot steering vectors that control safety-relevant behavior.</p>
+          <h3>Reliability of models</h3>
+          <p>Benchmarks, monitors, and a model's own confidence are all ways of measuring whether a model can be
+            trusted, and each can be misleading in ways that are hard to detect. We study these failure modes, from
+            contamination in benchmarks to the gap between what a judge rewards and what people actually want. We also
+            build models that report their uncertainty faithfully: MetaFaith and RLMF train models to express
+            uncertainty when, and only when, they are in fact uncertain. On the interpretability side, we trace
+            reliability to internal mechanisms, including shared circuits for uncertainty (SCIURus) and one-shot
+            steering vectors that control safety-relevant behavior.</p>
           <p class="projects-label">Recent projects</p>
           <ul class="projects">
             <li>
@@ -191,8 +192,7 @@
               </a>
             </li>
           </ul>
-          <p class="more">Also: <a
-              href="https://aclanthology.org/2025.naacl-long.610/"
+          <p class="more">Also: <a href="https://aclanthology.org/2025.naacl-long.610/"
               title="ReIFE: Re-evaluating Instruction-Following Evaluation">ReIFE</a> (2025), <a
               href="https://arxiv.org/abs/2501.12380"
               title="MMVU: Measuring Expert-Level Multi-Discipline Video Understanding">MMVU</a> (2025), <a
@@ -206,12 +206,14 @@
         </section>
         <section class="theme">
           <h3>Language models can be partners in scientific research</h3>
-          <p>The long-term goal is a system that reads the literature, proposes an idea, runs the experiment, and
-            critiques the result, with a scientist in the loop. We are building the pieces. REVERE and ResearchGym
-            treat research as an agent task and measure how far current models get. IdeaAnchor and MIR teach models
+          <p>AI can be a partner in scientific research and help scientists achieve more ambitious goals. We work on
+            studying various bottlenecks that limit the effectiveness of AI in research and evaluate efficacy of such
+            systems. REVERE and ResearchGym treat research as an agent task and measure how far current models get.
+            IdeaAnchor and MIR teach models
             to turn literature into grounded ideas. SciArena and our work on AI peer review ask whether model
-            judgments of scientific work can be trusted. The field's models for scientific text started with SciBERT
-            and SPECTER, and SciRIFF extends that line to instruction following over papers.</p>
+            judgments of scientific work can be trusted. Our group has a long history of working on scientific NLP,
+            which started with models like SciBERT
+            and SPECTER, and later post-training resources such as SciRIFF.</p>
           <p class="projects-label">Recent projects</p>
           <ul class="projects">
             <li>
