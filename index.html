@@ -161,48 +161,37 @@
         </section>
         <section class="theme">
           <h3>Reliability of models</h3>
-          <p>Benchmarks, monitors, and a model's own confidence are all ways of measuring whether a model can be
-            trusted, and each can be misleading in ways that are hard to detect. We study these failure modes, from
-            contamination in benchmarks to the gap between what a judge rewards and what people actually want. We also
-            build models that report their uncertainty faithfully: MetaFaith and RLMF train models to express
-            uncertainty when, and only when, they are in fact uncertain. On the interpretability side, we trace
-            reliability to internal mechanisms, including shared circuits for uncertainty (SCIURus) and one-shot
-            steering vectors that control safety-relevant behavior.</p>
+          <p>As models take on expert work, three questions decide whether their output can be trusted. Can a
+            model reliably communicate its confidence? MetaFaith and RLMF train models to express uncertainty when,
+            and only when, they are in fact uncertain, and SCIURus traces that uncertainty to shared circuits inside
+            the model. Can we understand model behavior from its internals in a way that generalizes beyond the
+            examples we studied? Our work on steering vectors shows that a direction optimized on a single example
+            can mediate safety-relevant behavior across many inputs, and we study when such findings transfer.
+            Can we trust agents that carry out long, multi-step executions? REFLECT asks whether LLM judges can be
+            relied on to evaluate evidence-based research agents, where errors accumulate over many steps and no
+            single answer can be checked.</p>
           <p class="projects-label">Recent projects</p>
           <ul class="projects">
             <li>
-              <a href="https://aclanthology.org/2025.emnlp-main.1505/"
-                title="MetaFaith: Faithful Natural Language Uncertainty Expression in LLMs">
+              <a href="https://aclanthology.org/2025.emnlp-main.1505/" title="MetaFaith: Faithful Natural Language Uncertainty Expression in LLMs">
                 <img src="./img/research/metafaith.jpg" alt="" width="720" height="480" loading="lazy">
                 <span>MetaFaith: faithful expression of uncertainty</span>
               </a>
             </li>
             <li>
-              <a href="https://arxiv.org/abs/2606.32032"
-                title="RLMF: Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs">
-                <img src="./img/research/rlmf.jpg" alt="" width="720" height="480" loading="lazy">
-                <span>RLMF: calibrated confidence from metacognitive feedback</span>
+              <a href="https://arxiv.org/abs/2502.18862" title="One-shot Optimized Steering Vectors Mediate Safety-relevant Behaviors in LLMs">
+                <img src="./img/research/steering.jpg" alt="" width="720" height="480" loading="lazy">
+                <span>Steering vectors: one-shot directions that mediate safety behavior</span>
               </a>
             </li>
             <li>
-              <a href="https://arxiv.org/abs/2605.19196"
-                title="Time to REFLECT: Can We Trust LLM Judges for Evidence-based Research Agents?">
+              <a href="https://arxiv.org/abs/2605.19196" title="Time to REFLECT: Can We Trust LLM Judges for Evidence-based Research Agents?">
                 <img src="./img/research/reflect.jpg" alt="" width="720" height="480" loading="lazy">
                 <span>REFLECT: can LLM judges be trusted on research agents?</span>
               </a>
             </li>
           </ul>
-          <p class="more">Also: <a href="https://aclanthology.org/2025.naacl-long.610/"
-              title="ReIFE: Re-evaluating Instruction-Following Evaluation">ReIFE</a> (2025), <a
-              href="https://arxiv.org/abs/2501.12380"
-              title="MMVU: Measuring Expert-Level Multi-Discipline Video Understanding">MMVU</a> (2025), <a
-              href="https://aclanthology.org/2025.naacl-long.618/"
-              title="SCIURus: Shared Circuits for Interpretable Uncertainty Representations in Language Models">SCIURus</a>
-            (2025), <a href="https://arxiv.org/abs/2502.18862"
-              title="One-shot Optimized Steering Vectors Mediate Safety-relevant Behaviors in LLMs">Steering vectors</a>
-            (2025), <a href="https://arxiv.org/abs/2607.01233"
-              title="Measuring the Gap Between Human and LLM Research Ideas">Human vs. LLM research ideas</a> (2026).
-          </p>
+          <p class="more">Also: <a href="https://arxiv.org/abs/2606.32032" title="Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs">RLMF</a> (2026), <a href="https://aclanthology.org/2025.naacl-long.618/" title="SCIURus: Shared Circuits for Interpretable Uncertainty Representations in Language Models">SCIURus</a> (2025), <a href="https://aclanthology.org/2025.naacl-long.610/" title="ReIFE: Re-evaluating Instruction-Following Evaluation">ReIFE</a> (2025), <a href="https://arxiv.org/abs/2607.01233" title="Measuring the Gap Between Human and LLM Research Ideas">Human vs. LLM research ideas</a> (2026).</p>
         </section>
         <section class="theme">
           <h3>Language models can be partners in scientific research</h3>
