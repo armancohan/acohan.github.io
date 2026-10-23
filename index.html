@@ -112,15 +112,17 @@
           <a href="https://scholar.google.com/citations?user=baI7IY0AAAAJ&amp;hl=en">Google Scholar</a> page.
         </p>
         <section class="theme">
-          <h3>Training and adapting language models from new sources of supervision</h3>
-          <p>Most of what a model can do is decided by what supervises it. Human labels are scarce and
-            expensive, and for expert tasks they are often unavailable, so my group studies what can stand in for
-            them during training and adaptation. We have shown that reference answers and rubrics can replace a
-            learned reward model, that a model can distill improvements from its own rubric-guided outputs, and
-            that retrievers can be trained for the reasoning-heavy queries agents actually issue. This builds on
-            earlier work on the models themselves: long-context attention (Longformer), pretraining for scientific
-            text (SciBERT, SPECTER), multi-document pretraining (PRIMERA), and diffusion as an alternative to
-            autoregressive generation (TESS, TESS 2).</p>
+          <h3>Training and evaluating language models in hard-to-verify domains</h3>
+          <p>Reinforcement learning works well when a verifier can check the answer, as in math or code.
+            Most expert work is not like that. A literature review, a clinical note, or a research proposal has no
+            single correct output to check against, so the usual recipe of training against a verifiable reward
+            does not apply. My group studies how to train, adapt, and evaluate models in these hard-to-verify
+            domains. We have shown that reference answers can anchor alignment where no verifier exists, that
+            rubrics can take the place of a learned reward model so a model can improve from its own
+            rubric-guided outputs, and that alignment can be measured by how well a model judges, since judging
+            is itself a hard-to-verify task. This work builds on our earlier models: long-context attention
+            (Longformer), pretraining for scientific text (SciBERT, SPECTER), multi-document pretraining
+            (PRIMERA), and diffusion language models (TESS, TESS 2).</p>
           <p class="projects-label">Recent projects</p>
           <ul class="projects">
             <li>
@@ -131,10 +133,9 @@
               </a>
             </li>
             <li>
-              <a href="https://aclanthology.org/2025.acl-long.1029/"
-                title="TESS 2: A Large-Scale Generalist Diffusion Language Model">
-                <img src="./img/research/tess2.jpg" alt="" width="720" height="480" loading="lazy">
-                <span>TESS 2: a generalist diffusion language model</span>
+              <a href="https://arxiv.org/abs/2511.20604" title="On Evaluating LLM Alignment by Evaluating LLMs as Judges">
+                <img src="./img/research/judges.jpg" alt="" width="720" height="480" loading="lazy">
+                <span>Alignment evaluation: measuring alignment through judging</span>
               </a>
             </li>
             <li>
@@ -145,7 +146,7 @@
               </a>
             </li>
           </ul>
-          <p class="more">Also: <a href="https://aclanthology.org/2026.acl-long.1705/"
+          <p class="more">Also: <a href="https://aclanthology.org/2025.acl-long.1029/" title="TESS 2: A Large-Scale Generalist Diffusion Language Model">TESS 2</a> (2025), <a href="https://aclanthology.org/2026.acl-long.1705/"
               title="Rethinking Reasoning-Intensive Retrieval: Evaluating and Advancing Retrievers in Agentic Search Systems">Reasoning-intensive
               retrieval</a> (2026), <a href="https://aclanthology.org/2024.eacl-long.144/"
               title="TESS: Text-to-Text Self-Conditioned Simplex Diffusion">TESS</a> (2024), <a
@@ -190,8 +191,7 @@
               </a>
             </li>
           </ul>
-          <p class="more">Also: <a href="https://arxiv.org/abs/2511.20604"
-              title="On Evaluating LLM Alignment by Evaluating LLMs as Judges">LLMs as judges</a> (2025), <a
+          <p class="more">Also: <a
               href="https://aclanthology.org/2025.naacl-long.610/"
               title="ReIFE: Re-evaluating Instruction-Following Evaluation">ReIFE</a> (2025), <a
               href="https://arxiv.org/abs/2501.12380"
