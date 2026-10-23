@@ -62,7 +62,8 @@
       <div>
         <h1><span class="cap">A</span>rman <span class="cap">C</span>ohan</h1>
         <p class="role">Assistant Professor of Computer Science at
-          <a href="https://www.yale.edu/">Yale University</a>.</p>
+          <a href="https://www.yale.edu/">Yale University</a> and Faculty Research Scientist at
+          <a href="https://allenai.org/">Ai2</a>.</p>
         <ul class="links">
           <li><a href="https://scholar.google.com/citations?user=baI7IY0AAAAJ&amp;hl=en">Google Scholar</a></li>
           <li><a href="https://www.semanticscholar.org/author/Arman-Cohan/2527954">Semantic Scholar</a></li>
@@ -112,16 +113,23 @@
           <a href="https://scholar.google.com/citations?user=baI7IY0AAAAJ&amp;hl=en">Google Scholar</a>.
         </p>
         <section class="theme">
-          <h3>New training signals make language models more capable</h3>
-          <p>Capability comes from what a model is trained on and how. My group has worked on this at every
-          scale: long-context attention (Longformer), pretraining for scientific text (SciBERT, SPECTER),
-          multi-document pretraining (PRIMERA), and diffusion as an alternative to autoregressive generation
-          (TESS, TESS 2). Our current focus is post-training, where the question is what supervises a model once
-          human labels run out. We have shown that reference answers and rubrics can stand in for a learned reward
-          model, that a model can distill its own improvements, and that retrievers can be trained for the
-          reasoning-heavy queries agents actually issue.</p>
+          <h3>Training and adapting language models from new sources of supervision</h3>
+          <p>Most of what a model can do is decided by what supervises it. Human labels are scarce and
+          expensive, and for expert tasks they are often unavailable, so my group studies what can stand in for
+          them during training and adaptation. We have shown that reference answers and rubrics can replace a
+          learned reward model, that a model can distill improvements from its own rubric-guided outputs, and
+          that retrievers can be trained for the reasoning-heavy queries agents actually issue. This builds on
+          earlier work on the models themselves: long-context attention (Longformer), pretraining for scientific
+          text (SciBERT, SPECTER), multi-document pretraining (PRIMERA), and diffusion as an alternative to
+          autoregressive generation (TESS, TESS 2).</p>
           <p class="projects-label">Recent projects</p>
           <ul class="projects">
+            <li>
+              <a href="https://openreview.net/forum?id=QIFuWgnn6m" title="Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation">
+                <img src="./img/research/rubric.jpg" alt="" width="720" height="480" loading="lazy">
+                <span>Rubric-conditioned self-distillation: rubrics as the reward</span>
+              </a>
+            </li>
             <li>
               <a href="https://aclanthology.org/2025.acl-long.1029/" title="TESS 2: A Large-Scale Generalist Diffusion Language Model">
                 <img src="./img/research/tess2.jpg" alt="" width="720" height="480" loading="lazy">
@@ -134,14 +142,8 @@
                 <span>References as supervision for alignment</span>
               </a>
             </li>
-            <li>
-              <a href="https://aclanthology.org/2026.acl-long.1705/" title="Rethinking Reasoning-Intensive Retrieval: Evaluating and Advancing Retrievers in Agentic Search Systems">
-                <img src="./img/research/retrieval.jpg" alt="" width="720" height="480" loading="lazy">
-                <span>Retrievers for reasoning-intensive, agentic search</span>
-              </a>
-            </li>
           </ul>
-          <p class="more">Also: <a href="https://openreview.net/forum?id=QIFuWgnn6m" title="Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation">Rubric self-distillation</a> (2026), <a href="https://aclanthology.org/2024.eacl-long.144/" title="TESS: Text-to-Text Self-Conditioned Simplex Diffusion">TESS</a> (2024), <a href="https://aclanthology.org/2022.acl-long.360/" title="PRIMERA: Pyramid-based Masked Sentence Pre-training for Multi-document Summarization">PRIMERA</a> (2022), <a href="https://arxiv.org/abs/2004.05150" title="Longformer: The Long-Document Transformer">Longformer</a> (2020), <a href="https://aclanthology.org/2020.acl-main.207/" title="SPECTER: Document-level Representation Learning using Citation-informed Transformers">SPECTER</a> (2020), <a href="https://aclanthology.org/D19-1371/" title="SciBERT: A Pretrained Language Model for Scientific Text">SciBERT</a> (2019).</p>
+          <p class="more">Also: <a href="https://aclanthology.org/2026.acl-long.1705/" title="Rethinking Reasoning-Intensive Retrieval: Evaluating and Advancing Retrievers in Agentic Search Systems">Reasoning-intensive retrieval</a> (2026), <a href="https://aclanthology.org/2024.eacl-long.144/" title="TESS: Text-to-Text Self-Conditioned Simplex Diffusion">TESS</a> (2024), <a href="https://aclanthology.org/2022.acl-long.360/" title="PRIMERA: Pyramid-based Masked Sentence Pre-training for Multi-document Summarization">PRIMERA</a> (2022), <a href="https://arxiv.org/abs/2004.05150" title="Longformer: The Long-Document Transformer">Longformer</a> (2020), <a href="https://aclanthology.org/2020.acl-main.207/" title="SPECTER: Document-level Representation Learning using Citation-informed Transformers">SPECTER</a> (2020), <a href="https://aclanthology.org/D19-1371/" title="SciBERT: A Pretrained Language Model for Scientific Text">SciBERT</a> (2019).</p>
         </section>
         <section class="theme">
           <h3>A model is only useful if we can tell when to trust it</h3>
